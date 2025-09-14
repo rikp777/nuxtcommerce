@@ -70,7 +70,7 @@ useHead(() => {
   const title = product.value?.name || siteName;
   const description = plainDescription.value;
   const img = image.value;
-  const keywords = [product.value?.name, product.value?.allPaStyle?.nodes?.[0]?.name, siteName].filter(Boolean).join(', ');
+  const keywords = [product.value?.name, product.value?.allPaColor?.nodes?.[0]?.name, siteName].filter(Boolean).join(', ');
 
   return {
     title,
@@ -177,12 +177,12 @@ const { handleAddToCart, addToCartButtonStatus } = useCart();
                 :to="`/product/${vars.slug}-${product.sku.split('-')[0]}`"
                 :class="[
                   'flex w-12 rounded-lg border-2 select-varitaion transition-all duration-200 bg-neutral-200 dark:bg-neutral-800',
-                  vars.allPaColor.nodes[0].name === product.allPaColor.nodes[0].name ? 'selected-varitaion' : 'border-[#9b9b9b] dark:border-[#8c8c8c]',
+                  vars.allPaColor?.nodes[0]?.name === product.allPaColor?.nodes[0]?.name ? 'selected-varitaion' : 'border-[#9b9b9b] dark:border-[#8c8c8c]',
                 ]">
                 <NuxtImg
-                  :alt="vars.allPaColor.nodes[0].name"
+                  :alt="vars.allPaColor?.nodes[0]?.name"
                   :src="vars.image.sourceUrl"
-                  :title="vars.allPaColor.nodes[0].name"
+                  :title="vars.allPaColor?.nodes[0]?.name"
                   class="rounded-md border-2 border-white dark:border-black" />
               </NuxtLink>
             </div>

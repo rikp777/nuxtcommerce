@@ -10,7 +10,7 @@ export const getProductsQuery = gql`
           name
           regularPrice
           salePrice
-          allPaStyle {
+          allPaColor {
             nodes {
               name
             }

@@ -2,42 +2,43 @@
 import pkg from './package.json';
 
 export default defineNuxtConfig({
-  devtools: { enabled: false },
+    devtools: {enabled: false},
 
-  modules: ['nuxt-graphql-request', '@vueuse/nuxt', '@nuxt/ui', '@nuxt/image', 'notivue/nuxt', '@nuxthub/core'],
+    modules: ['nuxt-graphql-request', '@vueuse/nuxt', '@nuxt/ui', '@nuxt/image', 'notivue/nuxt', '@nuxthub/core'],
 
-  hub: {
-    cache: true,
-  },
-
-  notivue: {
-    position: 'top-center',
-    limit: 3,
-    notifications: { global: { duration: 3000 } },
-  },
-
-  css: ['notivue/notification.css', 'notivue/animations.css'],
-
-  runtimeConfig: {
-    // Sunucu tarafında kullan (client'a sızmaz):
-    gqlHost: process.env.GQL_HOST || '',
-    public: {
-      version: pkg.version,
+    hub: {
+        cache: true,
     },
-  },
 
-  // Sayfa bazlı render/cache stratejisi:
-  routeRules: {
-    '/': { prerender: true },
-    '/categories': { swr: 3600 }, // sık güncellenmeyen liste
-    // Admin / kişisel sayfalar genelde SSR off tercih edilir:
-    '/favorites': { swr: 600 },
-    // /api/** uçları handler düzeyinde cache'leniyor; burada ekstra kural yok
-  },
+    notivue: {
+        position: 'top-center',
+        limit: 3,
+        notifications: {global: {duration: 3000}},
+    },
 
-  nitro: {
-    prerender: { routes: ['/sitemap.xml', '/robots.txt'] },
-  },
+    css: ['notivue/notification.css', 'notivue/animations.css'],
 
-  compatibilityDate: '2024-08-03',
+    runtimeConfig: {
+        // Sunucu tarafında kullan (client'a sızmaz):
+        gqlHost: process.env.GQL_HOST || '',
+        public: {
+            version: pkg.version,
+            stripePk: process.env.STRIPE_PUBLISHABLE_KEY || '', //todo decide if we want to communicate via middleman nuxt server
+        },
+    },
+
+    // Sayfa bazlı render/cache stratejisi:
+    routeRules: {
+        '/': {prerender: true},
+        '/categories': {swr: 3600}, // sık güncellenmeyen liste
+        // Admin / kişisel sayfalar genelde SSR off tercih edilir:
+        '/favorites': {swr: 600},
+        // /api/** uçları handler düzeyinde cache'leniyor; burada ekstra kural yok
+    },
+
+    nitro: {
+        prerender: {routes: ['/sitemap.xml', '/robots.txt']},
+    },
+
+    compatibilityDate: '2024-08-03',
 });

@@ -40,7 +40,7 @@ useSeoMeta({
               <span class="line-through text-white/50" v-html="product.regularPrice"></span>
             </div>
             <div class="font-bold">{{ product.name }}</div>
-            <div class="text-sm font-medium">{{ product.allPaStyle.nodes[0].name }}</div>
+            <div class="text-sm font-medium">{{ product.allPaColor?.nodes[0]?.name }}</div>
           </div>
         </NuxtLink>
       </div>

@@ -35,7 +35,7 @@ const {order} = useCheckout();
               </div>
 
               <div class="text-xs font-medium text-neutral-600 dark:text-neutral-300">
-                Size: {{ product.variation.attributes.map(attr => attr.value.toUpperCase()).join(', ') }} • Qty: {{ product.quantity }}
+                {{ $t('product.size') }}: {{ product.variation.attributes.map(attr => attr.value.toUpperCase()).join(', ') }} • {{ $t('product.quantity') }}: {{ product.quantity }}
               </div>
             </div>
             <button

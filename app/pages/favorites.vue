@@ -1,20 +1,22 @@
 <!--app/pages/favorites.vue-->
 <script setup>
 const { removeFromList, wishlist } = useWishlist();
-const { siteName } = useAppConfig();
+const { name } = useAppConfig().site;
 const url = useRequestURL();
+const localePath = useLocalePath();
+
 const canonical = url.origin + url.pathname;
 
 useSeoMeta({
   title: 'Favorites',
   ogTitle: 'Favorites',
-  description: `Your favorite products saved on ${siteName}.`,
-  ogDescription: `Your favorite products saved on ${siteName}.`,
+  description: `Your favorite products saved on ${name}.`,
+  ogDescription: `Your favorite products saved on ${name}.`,
   ogUrl: canonical,
   canonical,
-  keywords: `favorites, wishlist, ${siteName}`,
+  keywords: `favorites, wishlist, ${name}`,
   twitterTitle: 'Favorites',
-  twitterDescription: `Your favorite products saved on ${siteName}.`,
+  twitterDescription: `Your favorite products saved on ${name}.`,
   ogImage: 'https://commerce.nuxt.dev/social-card.jpg',
   twitterImage: 'https://commerce.nuxt.dev/social-card.jpg',
   robots: 'noindex, nofollow',
@@ -33,7 +35,9 @@ useSeoMeta({
       class="w-full sm:max-w-[300px] p-3 lg:p-2 relative select-none">
       <div class="relative overflow-hidden pb-[125%] rounded-[32px]">
         <NuxtImg :alt="product.name" class="absolute w-full h-full object-cover bg-neutral-200 dark:bg-neutral-800" :src="product.image.sourceUrl" loading="lazy" />
-        <NuxtLink class="absolute inset-0 bg-gradient-to-t from-black/50 hover:from-black/60 flex items-end p-5" :to="`/product/${product.slug}-${product.sku.split('-')[0]}`">
+        <NuxtLink
+          class="absolute inset-0 bg-gradient-to-t from-black/50 hover:from-black/60 flex items-end p-5"
+          :to="localePath(`/product/${product.slug}-${product.sku.split('-')[0]}`)">
           <div class="grid gap-0.5 text-white">
             <div class="flex gap-2 text-sm">
               <span v-html="product.salePrice"></span>
@@ -57,11 +61,9 @@ useSeoMeta({
         class="bg-alizarin-crimson-100 dark:bg-alizarin-crimson-950 rounded-full p-6 flex items-center shadow-2xl shadow-alizarin-crimson-300 dark:shadow-alizarin-crimson-950 justify-center">
         <UIcon name="i-iconamoon-heart-fill" class="w-20 h-20 text-alizarin-crimson-400 dark:text-alizarin-crimson-700 pulse-heart" />
       </div>
-      <div class="font-extrabold text-3xl my-6">Nothing to show... yet!</div>
-      <div class="text-sm text-center mb-5">
-        Wishlist you create will live here.
-        <br />
-        These are a few of your favorite things...
+      <div class="font-extrabold text-3xl my-6">{{ $t('favorites.nothing_to_show_yet') }}</div>
+      <div class="text-sm text-center mb-5 max-w-md">
+        {{ $t('favorites.wishlist_lives_here') }}
       </div>
     </div>
   </div>

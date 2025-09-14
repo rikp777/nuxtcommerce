@@ -1,20 +1,22 @@
 <!--app/pages/categories.vue-->
 <script setup>
-const categoriesData = ref([]);
-const { siteName } = useAppConfig();
+const { name } = useAppConfig().site;
 const url = useRequestURL();
+const localePath = useLocalePath();
+
+const categoriesData = ref([]);
 const canonical = url.origin + url.pathname;
 
 useSeoMeta({
   title: 'Categories',
   ogTitle: 'Categories',
-  description: `Browse product categories on ${siteName}.`,
-  ogDescription: `Browse product categories on ${siteName}.`,
+  description: `Browse product categories on ${name}.`,
+  ogDescription: `Browse product categories on ${name}.`,
   ogUrl: canonical,
   canonical,
-  keywords: `categories, ${siteName}`,
+  keywords: `categories, ${name}`,
   twitterTitle: 'Categories',
-  twitterDescription: `Browse product categories on ${siteName}.`,
+  twitterDescription: `Browse product categories on ${name}.`,
   ogImage: 'https://commerce.nuxt.dev/social-card.jpg',
   twitterImage: 'https://commerce.nuxt.dev/social-card.jpg',
 });
@@ -33,7 +35,7 @@ const categories = computed(() => categoriesData.value);
     <div v-if="!categories.length" v-for="i in 13" :key="i" class="w-full max-w-[444px] p-3 lg:p-2">
       <div class="pb-[75%] relative overflow-hidden bg-neutral-200 dark:bg-neutral-800 skeleton rounded-[32px]"></div>
     </div>
-    <NuxtLink v-for="category in categories" :key="category.id" :to="`/?category=${encodeURIComponent(category.name)}`" class="w-full max-w-[444px] p-3 lg:p-2">
+    <NuxtLink v-for="category in categories" :key="category.id" :to="localePath(`/?category=${encodeURIComponent(category.name)}`)" class="w-full max-w-[444px] p-3 lg:p-2">
       <div class="pb-[75%] relative overflow-hidden">
         <NuxtImg
           :alt="category.name"

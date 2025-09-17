@@ -17,7 +17,7 @@ const userDetails = ref({
   country: 'NL',
 });
 
-const selectedPaymentMethod = ref('cod');
+const selectedPaymentMethod = ref(null);
 let elements = null;
 let paymentElement = null;
 
@@ -62,6 +62,12 @@ watch(selectedPaymentMethod, (newMethod) => {
     initializeOrUpdateStripeElements();
   }
 });
+
+watch(paymentGateways, (gateways) => {
+  if (gateways && gateways.length > 0 && !selectedPaymentMethod.value) {
+    selectedPaymentMethod.value = gateways[0].id;
+  }
+}, { immediate: true });
 
 onMounted(async () => {
   await stripe;
@@ -142,7 +148,7 @@ const handlePlaceOrder = async () => {
         <div class="text-sm font-semibold p-4 text-neutral-600 dark:text-neutral-400">
           {{
             $t('checkout.pay.description', {
-              total: cart.reduce((total, item) => total + parseFloat(item.variation.node.salePrice), 0).toFixed(2),
+              total: cartTotal,
               items: cart.length,
             })
           }}
@@ -156,7 +162,7 @@ const handlePlaceOrder = async () => {
             <div v-if="!isLoading" class="absolute">
               {{
                 $t('checkout.pay.btn', {
-                  total: cart.reduce((total, item) => total + parseFloat(item.variation.node.salePrice), 0).toFixed(2),
+                  total: cartTotal,
                 })
               }}
             </div>

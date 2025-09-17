@@ -60,6 +60,7 @@ export const useStripePayment = () => {
 
         try {
             stripe.value = await loadStripe(stripePk);
+            console.log('Stripe initialized:', stripe.value);
         } catch (e) {
             console.error('Failed to load Stripe:', e);
             error.value = 'Could not initialize payment gateway.';

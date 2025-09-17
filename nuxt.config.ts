@@ -32,6 +32,7 @@ export default defineNuxtConfig({
     gqlHost: process.env.GQL_HOST || '',
     public: {
       version: pkg.version,
+        stripePk: process.env.STRIPE_PUBLISHABLE_KEY || '',
     },
   },
 

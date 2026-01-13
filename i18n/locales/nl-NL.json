@@ -2,7 +2,9 @@
   "general": {
     "go_back_home": "Ga terug naar home",
     "go_back": "Ga terug",
-    "loading": "Laden..."
+    "loading": "Laden...",
+    "show_less": "Toon minder",
+    "show_more": "Toon meer"
   },
   "theme": {
     "dark": "Donker",
@@ -76,9 +78,19 @@
     "originally": "Oorspronkelijk",
     "size": "Maat",
     "quantity": "Aantal",
-    "sku": "artikelnummer",
+    "return_policy_text": "U heeft het recht om uw bestelling tot 15 dagen na ontvangst zonder opgave van reden te annuleren. Na annulering heeft u nogmaals 14 dagen om uw product retour te sturen. U krijgt dan het volledige orderbedrag inclusief verzendkosten gecrediteerd.",
+    "sku": "Artikelnummer",
     "vat_included": "Inclusief BTW",
     "featured_information": "Uitgelichte Informatie",
+    "specifications": "Specificaties",
+    "free_return": "Gratis retourneren binnen 15 dagen",
+    "click_for_details": "Klik voor details",
+    "information": "Informatie",
+    "shop_similar": "Bekijk vergelijkbaar",
+    "shipping_returns": "Verzending & Retour",
+    "return_policy": "Retourbeleid",
+    "return_policy_title": "Retourbeleid",
+    "article_details": "Artikel Details"
     "specifications": "Specificaties",
     "free_return": "Gratis retourneren binnen 15 dagen. Klik voor meer informatie.",
     "information": "Informatie",

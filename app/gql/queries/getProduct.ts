@@ -12,12 +12,21 @@ export const getProductQuery = gql`
         regularPrice
         salePrice
         description
+        shortDescription
         image {
           sourceUrl(size: LARGE)
         }
         galleryImages {
           nodes {
             sourceUrl(size: LARGE)
+          }
+        }
+        attributes {
+          nodes {
+            id
+            label
+            name
+            options
           }
         }
         allPaColor {
@@ -53,7 +62,9 @@ export const getProductQuery = gql`
             stockStatus
             stockQuantity
             attributes {
-              nodes {
+             nodes {
+                label 
+                name
                 value
               }
             }

@@ -1,5 +1,6 @@
 {
   "general": {
+    "go_back_home": "Zurück zur Startseite",
     "go_back": "Zurück",
     "loading": "Laden..."
   },
@@ -117,5 +118,11 @@
     "friday": "Freitag",
     "saturday": "Samstag",
     "sunday": "Sonntag"
+  },
+  "error": {
+    "not_found": "Seite nicht gefunden",
+    "not_found_desc": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "server_error": "Etwas ist schiefgelaufen",
+    "server_error_desc": "Wir haben Probleme bei der Verarbeitung Ihrer Anfrage. Bitte versuchen Sie es später erneut."
   }
 }

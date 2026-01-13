@@ -10,47 +10,42 @@
     "dark": "Dunkel",
     "light": "Hell",
     "system": "System",
-    "toggle": "Thema wechseln"
+    "toggle": "Design wechseln"
   },
   "nav": {
+    "title": "Navigation",
     "home": "Startseite",
     "categories": "Kategorien",
     "favorites": "Favoriten",
-    "products": "Produkte"
+    "about": "Über uns"
   },
   "footer": {
-    "shop": "Einkaufen",
-    "company": "Unternehmen",
-    "support": "Hilfe",
-    "about_us": "Über uns",
-    "careers": "Karriere",
-    "contact": "Kontakt",
-    "faq": "FAQ",
-    "newsletter_title": "Bleiben Sie auf dem Laufenden",
-    "newsletter_desc": "Abonnieren Sie unseren Newsletter für Updates zu neuen Kollektionen und Angeboten.",
+    "newsletter_title": "Auf dem Laufenden bleiben",
+    "newsletter_desc": "Abonnieren Sie unseren Newsletter, um Updates zu neuen Kollektionen und Angeboten zu erhalten.",
     "email_placeholder": "Ihre E-Mail-Adresse...",
     "developed_by_author": "von {author}",
+    "based_on": "Basierend auf",
     "change_language": "Sprache ändern"
   },
   "search": {
     "placeholder": "Suchen...",
-    "placeholder_in_category": "In {category} suchen...",
+    "placeholder_in_category": "Suchen in {category}...",
     "no_results_for_query": "Keine Ergebnisse für {query}",
-    "no_results_suggestion": "Verbessern Sie Ihre Ergebnisse, indem Sie die Rechtschreibung überprüfen oder ein allgemeineres Stichwort verwenden.",
+    "no_results_suggestion": "Versuchen Sie, Ihre Rechtschreibung zu überprüfen oder allgemeinere Begriffe zu verwenden.",
     "view_all_results": "Alle Ergebnisse anzeigen",
     "new_products": "Neue Produkte",
     "no_products_matching": "Keine passenden Produkte",
-    "no_products_found_matching": "Keine passenden Produkte gefunden",
+    "no_products_found_matching": "Keine Produkte passend zu",
     "no_products_found": "Keine Produkte gefunden",
-    "use_search_bar_above": "Sie können die Suchleiste oben verwenden, um mit anderen Begriffen zu suchen.",
+    "use_search_bar_above": "Nutzen Sie die Suchleiste oben, um nach anderen Begriffen zu suchen.",
     "in": "in",
     "reset_search": "Suche zurücksetzen"
   },
   "filter": {
     "all_categories": "Alle Kategorien",
     "newest": "Neueste",
-    "price_low_high": "Preis: Niedrig bis Hoch",
-    "price_high_low": "Preis: Hoch bis Niedrig"
+    "price_low_high": "Preis: Aufsteigend",
+    "price_high_low": "Preis: Absteigend"
   },
   "checkout": {
     "title": "Kasse",
@@ -63,9 +58,9 @@
       "address": "Adresse"
     },
     "pay": {
-      "description": "Gesamtzahlung von {total} für {items} Artikel",
+      "description": "Zahlung von insgesamt {total} für {items} Artikel",
       "btn": "{total} bezahlen",
-      "secure": "Ihre Zahlung ist durch {method} gesichert",
+      "secure": "Ihre Zahlung ist gesichert durch {method}",
       "success": "Zahlung erfolgreich!",
       "processed": "Vielen Dank für Ihren Einkauf! Ihre Bestellung wird bearbeitet.",
       "total": "Gesamt",
@@ -96,11 +91,17 @@
     "empty": "Ihr Warenkorb ist leer",
     "notting_added": "Sie haben noch keine Artikel in Ihren Warenkorb gelegt.",
     "add_to_cart": "In den Warenkorb",
-    "added_to_cart": "Zum Warenkorb hinzugefügt"
+    "added_to_cart": "Hinzugefügt"
   },
   "favorites": {
-    "nothing_to_show_yet": "Noch nichts zu sehen... noch nicht!",
-    "wishlist_lives_here": "Wunschlisten, die Sie erstellen, werden hier angezeigt. Das sind einige Ihrer Lieblingssachen..."
+    "nothing_to_show_yet": "Noch nichts zu sehen!",
+    "wishlist_lives_here": "Ihre Wunschliste finden Sie hier. Dies sind einige Ihrer Lieblingssachen..."
+  },
+  "error": {
+    "not_found": "Seite nicht gefunden",
+    "not_found_desc": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "server_error": "Etwas ist schiefgelaufen",
+    "server_error_desc": "Wir haben Probleme bei der Verarbeitung Ihrer Anfrage. Bitte versuchen Sie es später noch einmal."
   },
   "stores": {
     "find_store": "Filiale finden",
@@ -109,8 +110,45 @@
     "open": "Geöffnet",
     "closed": "Geschlossen",
     "call": "Anrufen",
-    "navigate": "Navigieren",
+    "navigate": "Route planen",
     "opening_hours": "Öffnungszeiten"
+  },
+  "store": {
+    "faq": {
+      "title": "Häufig gestellte Fragen (FAQ)",
+      "subtitle": "Alles, was Sie über unsere Produkte und Dienstleistungen wissen müssen.",
+      "tagline": "Haben Sie Fragen? Wir haben Antworten!",
+      "items": {
+        "range": {
+          "q": "Wie weit kann ich mit vollem Akku fahren?",
+          "a": "Die Reichweite unserer E-Bikes liegt zwischen 60 und 120 Kilometern, abhängig von Modell, Fahrstil, Gelände und Wetterbedingungen."
+        },
+        "charging": {
+          "q": "Wie lange dauert es, den Akku aufzuladen?",
+          "a": "Im Durchschnitt dauert es 4 bis 6 Stunden, einen Akku vollständig aufzuladen. Unsere Akkus können auch zwischengeladen werden, ohne Schaden zu nehmen."
+        },
+        "warranty": {
+          "q": "Haben die E-Bikes eine Garantie?",
+          "a": "Ja! Wir bieten standardmäßig 2 Jahre Garantie sowohl auf das Fahrrad als auch auf die elektrischen Komponenten wie Akku und Motor."
+        },
+        "test_drive": {
+          "q": "Kann ich das E-Bike erst testen?",
+          "a": "Sicher! Kontaktieren Sie uns, um eine Probefahrt an einem Standort in Ihrer Nähe zu vereinbaren."
+        },
+        "maintenance": {
+          "q": "Was, wenn ich Teile ersetzen oder Wartung benötige?",
+          "a": "Unsere E-Bikes sind modular aufgebaut. Kontaktieren Sie uns einfach, und wir helfen Ihnen schnell mit Teilen oder Service."
+        },
+        "delivery": {
+          "q": "Wie wird mein E-Bike geliefert?",
+          "a": "Ihr E-Bike wird fahrbereit und vollständig eingestellt zu Ihnen nach Hause geliefert. Keine Montage erforderlich!"
+        }
+      },
+      "still_questions": "Haben Sie noch Fragen?",
+      "contact_us": "Kontaktieren Sie uns"
+    },
+    "terms": "AGB",
+    "cookies": "Cookie-Richtlinie"
   },
   "days": {
     "monday": "Montag",
@@ -121,10 +159,49 @@
     "saturday": "Samstag",
     "sunday": "Sonntag"
   },
-  "error": {
-    "not_found": "Seite nicht gefunden",
-    "not_found_desc": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
-    "server_error": "Etwas ist schiefgelaufen",
-    "server_error_desc": "Wir haben Probleme bei der Verarbeitung Ihrer Anfrage. Bitte versuchen Sie es später erneut."
+  "company": {
+    "title": "Unternehmensinformationen",
+    "kvkNumber": "Handelsregister",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "about": {
+      "title": "Über {name}",
+      "subtitle": "Wir sind ein Team von Abenteurern, Kreativen und Outdoor-Enthusiasten mit einer gemeinsamen Mission: Menschen dem Abenteuer näher zu bringen.",
+      "tagline": "Mehr als nur E-Bikes – wir schaffen Erlebnisse.",
+      "passion": {
+        "title": "Unsere Leidenschaft",
+        "desc_1": "Bei {name} bauen wir nicht nur elektrische Offroad-Bikes; wir schaffen Erlebnisse. Wir sind ein kleines, aber eng verbundenes Team mit einer großen Leidenschaft für Abenteuer, Natur und Geschichten.",
+        "desc_2": "Jedes Produkt, das wir entwerfen, und jeder Trip, den wir planen, kommt von Herzen. Wir möchten, dass Kinder und Erwachsene gleichermaßen von Bildschirmen abschalten und wieder Verbindung zu Schlamm, Geschwindigkeit und der Natur aufnehmen."
+      },
+      "team": {
+        "title": "Das Team"
+      },
+      "values": {
+        "title": "Wie wir arbeiten",
+        "teamwork": {
+          "title": "Teamarbeit",
+          "desc": "Wir glauben an die Kraft der Zusammenarbeit. Unsere besten Ideen entstehen beim Brainstorming in der Natur und in enger Zusammenarbeit mit lokalen Guides und Kreativen."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "desc": "Wir kombinieren jahrelange Erfahrung mit frischen Ideen. Die Entwicklung elektrischer Offroad-Bikes erfordert präzise Ausführung und vorausschauendes Design."
+        },
+        "safety": {
+          "title": "Sicherheit",
+          "desc": "Sicherheit steht bei jedem Abenteuer an erster Stelle. Von der Bauqualität unserer Bikes bis zur Planung von Erlebnissen gehen wir keine Kompromisse ein."
+        }
+      },
+      "cta": {
+        "title": "Starten Sie ins Abenteuer",
+        "desc": "Haben Sie Fragen zu unseren Bikes oder möchten Sie zusammenarbeiten?"
+      }
+    },
+    "careers": "Karriere",
+    "contact": "Kontakt",
+    "support": "Support"
+  },
+  "socials": {
+    "instagram": "Instagram",
+    "facebook": "Facebook"
   }
 }

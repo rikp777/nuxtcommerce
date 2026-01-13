@@ -1,11 +1,22 @@
 // app/app.config.ts
+import companyData from './data/company.json';
+
 export default defineAppConfig({
-  site: {
-    name: 'NuxtCommerce',
-    description: 'NuxtCommerce is a dynamic e-commerce solution developed with Nuxt 4 and GraphQL, tailored for WooCommerce.',
-  },
-  ui: {
-    primary: 'red',
-    gray: 'neutral',
-  },
+    site: {
+        name: 'BBXtremeshop',
+        logoLight: 'logo_light.png',
+        logoDark: 'logo_dark.png',
+        description: ''
+    },
+    ui: {
+        primary: 'blue',
+        gray: 'neutral',
+    },
+    company: companyData,
+    developer: {
+        name: "rikp777",
+        social: {
+            linkedin: "https://www.linkedin.com/in/rik-peeters-708735252/",
+        }
+    },
 });

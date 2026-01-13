@@ -13,23 +13,18 @@
     "toggle": "Toggle theme"
   },
   "nav": {
+    "title": "Navigation",
     "home": "Home",
     "categories": "Categories",
     "favorites": "Favorites",
-    "products": "Products"
+    "about": "About"
   },
   "footer": {
-    "shop": "Shop",
-    "company": "Company",
-    "support": "Support",
-    "about_us": "About Us",
-    "careers": "Careers",
-    "contact": "Contact",
-    "faq": "FAQ",
     "newsletter_title": "Stay in the loop",
     "newsletter_desc": "Subscribe to our newsletter to receive updates on new collections and offers.",
     "email_placeholder": "Your email address...",
     "developed_by_author": "by {author}",
+    "based_on": "Based on",
     "change_language": "Change language"
   },
   "search": {
@@ -78,19 +73,19 @@
     "originally": "Originally",
     "size": "Size",
     "quantity": "Quantity",
-    "return_policy_text": "You have the right to cancel your order up to 15 days after receipt without giving any reason. After cancellation, you have another 14 days to return your product. You will then be credited with the full order amount including shipping costs.",
-    "sku": "Article number",
-    "vat_included": "VAT included",
-    "featured_information": "Featured Information",
+    "return_policy_text": "You have the right to cancel your order up to 15 days after receipt without giving any reason. After cancellation, you have another 14 days to return your product. You will then be refunded the full order amount including shipping costs.",
+    "sku": "Item number",
+    "vat_included": "Inc. VAT",
+    "featured_information": "Product information",
     "specifications": "Specifications",
-    "free_return": "Free returns within 15 days",
+    "free_return": "Free return within 15 days",
     "click_for_details": "Click for details",
     "information": "Information",
-    "shop_similar": "Shop similar",
+    "shop_similar": "Similar products",
     "shipping_returns": "Shipping & Returns",
-    "return_policy": "Return Policy",
-    "return_policy_title": "Return Policy",
-    "article_details": "Article Details"
+    "return_policy": "Return policy",
+    "return_policy_title": "Return policy",
+    "article_details": "Item details"
   },
   "cart": {
     "empty": "Your cart is empty",
@@ -118,6 +113,43 @@
     "navigate": "Navigate",
     "opening_hours": "Opening hours"
   },
+  "store": {
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our products and services.",
+      "tagline": "Got questions? We've got answers!",
+      "items": {
+        "range": {
+          "q": "How far can I drive on a full battery?",
+          "a": "The range of our e-bikes is between 60 and 120 kilometres, depending on the model, riding style, terrain and weather conditions."
+        },
+        "charging": {
+          "q": "How long does it take to charge the battery?",
+          "a": "On average, it takes 4 to 6 hours to fully charge a battery. Our batteries can also be partially charged without damage."
+        },
+        "warranty": {
+          "q": "Do the e-bikes come with a warranty?",
+          "a": "Yes! We offer a standard 2-year warranty on both the bicycle and the electrical components, such as the battery and motor."
+        },
+        "test_drive": {
+          "q": "Can I test the e-bike first?",
+          "a": "Certainly! Please contact us to schedule a test drive at a location near you."
+        },
+        "maintenance": {
+          "q": "What if I need to replace parts or require maintenance?",
+          "a": "Our e-bikes are modular in design. Simply contact us and we will quickly assist you with parts or servicing."
+        },
+        "delivery": {
+          "q": "How will my e-bike be delivered?",
+          "a": "Your e-bike will be delivered to your home ready to ride and fully adjusted. No assembly required!"
+        }
+      },
+      "still_questions": "Still have questions?",
+      "contact_us": "Contact us"
+    },
+    "terms": "Terms & Conditions",
+    "cookies": "Cookie Policy"
+  },
   "days": {
     "monday": "Monday",
     "tuesday": "Tuesday",
@@ -126,5 +158,50 @@
     "friday": "Friday",
     "saturday": "Saturday",
     "sunday": "Sunday"
+  },
+  "company": {
+    "title": "Company Information",
+    "kvkNumber": "CoC",
+    "email": "Email",
+    "phone": "Phone",
+    "about": {
+      "title": "About {name}",
+      "subtitle": "We are a team of adventurers, creatives, and outdoor enthusiasts with a shared mission: to bring people closer to adventure.",
+      "tagline": "More than just e-bikes – we create experiences.",
+      "passion": {
+        "title": "Our Passion",
+        "desc_1": "At {name}, we don't just build electric offroad bikes; we craft experiences. We are a small but tight-knit team with a huge passion for adventure, nature, and storytelling.",
+        "desc_2": "Every product we design and every trip we plan comes straight from the heart. We want kids and adults alike to disconnect from screens and reconnect with the mud, the speed, and the outdoors."
+      },
+      "team": {
+        "title": "Meet the Crew"
+      },
+      "values": {
+        "title": "How We Work",
+        "teamwork": {
+          "title": "Teamwork",
+          "desc": "We believe in the power of collaboration. Our best ideas come from brainstorming in nature and working closely with local guides and creators."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "desc": "We combine years of experience with fresh ideas. Creating electric offroad bikes requires precise execution and forward-thinking design."
+        },
+        "safety": {
+          "title": "Safety",
+          "desc": "Safety is paramount in every adventure. From the build quality of our bikes to the planning of experiences, we never compromise."
+        }
+      },
+      "cta": {
+        "title": "Join the Adventure",
+        "desc": "Have questions about our bikes or want to collaborate?"
+      }
+    },
+    "careers": "Careers",
+    "contact": "Contact",
+    "support": "Support"
+  },
+  "socials": {
+    "instagram": "Instagram",
+    "facebook": "Facebook"
   }
 }

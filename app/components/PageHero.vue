@@ -17,7 +17,7 @@ const props = defineProps<{
     <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
 
     <div class="absolute bottom-0 left-0 p-8 lg:p-12 max-w-2xl z-10">
-      <span class="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-white uppercase bg-alizarin-crimson-600 rounded-full">
+      <span class="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-white uppercase bg-brand rounded-full">
         {{ tagline }}
       </span>
       <h1 class="text-4xl lg:text-6xl font-bold text-white mb-4 tracking-tight">

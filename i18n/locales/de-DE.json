@@ -145,6 +145,7 @@
         }
       },
       "still_questions": "Haben Sie noch Fragen?",
+      "cant_find_answer": "Finden Sie die Antwort nicht? Unser Team hilft Ihnen gerne weiter, damit Sie wieder durchstarten können.",
       "contact_us": "Kontaktieren Sie uns"
     },
     "legal": {

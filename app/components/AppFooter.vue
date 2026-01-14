@@ -12,7 +12,7 @@ const config = useRuntimeConfig();
 const footerLinks = computed(() => {
   const companyLinks = [
     ...(config.public.enable.storeLocator ? [{label: t('stores.find_store'), to: '/stores'}] : []),
-    {label: t('company.about.title'), to: '/about'},
+    ...(config.public.enable.about ? [{label: t('company.about.title'), to: '/about'}] : []),
   ];
 
   const supportLinks = [
@@ -22,10 +22,12 @@ const footerLinks = computed(() => {
     ...(config.public.enable.legal ? [{label: t('store.legal.title'), to: '/legal'}] : []),
   ];
 
-  return [
+  const groups = [
     { title: t('company.title'), links: companyLinks },
     { title: t('company.support'), links: supportLinks }
   ];
+
+  return groups.filter(group => group.links.length > 0);
 });
 </script>
 
@@ -51,7 +53,7 @@ const footerLinks = computed(() => {
           </ul>
         </div>
 
-        <div class="lg:pl-4 flex flex-col gap-8">
+        <div class="lg:col-start-4 lg:pl-4 flex flex-col gap-8">
           <SubscribeBox />
           <FooterSocials />
         </div>

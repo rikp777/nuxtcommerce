@@ -39,6 +39,7 @@ export default defineNuxtConfig({
     gqlHost: process.env.GQL_HOST || '',
     public: {
       enable: {
+        about: process.env.ENABLE_ABOUT === 'true' || false,
         storeLocator: process.env.ENABLE_STORE_LOCATOR === 'true' || false,
         legal: process.env.ENABLE_LEGAL === 'true' || false,
         socials: process.env.ENABLE_SOCIALS === 'true' || false,

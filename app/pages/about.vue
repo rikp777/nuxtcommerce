@@ -6,6 +6,11 @@ const { t } = useI18n();
 const localePath = useLocalePath();
 const appConfig = useAppConfig();
 const siteName = appConfig.site.name;
+const config = useRuntimeConfig()
+
+if (!config.public.enable.about) {
+  throw createError({ statusCode: 404, statusMessage: 'Page Not Found' });
+}
 
 type CrewMember = {
   id: number;

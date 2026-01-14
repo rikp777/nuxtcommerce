@@ -1,6 +1,24 @@
 [
   {
     "id": 1,
+    "name": ".hey",
+    "address": "Venrayseweg 126b, 5961 AJ Horst, Nederland",
+    "phone": "+31 6 5366 4416",
+    "type": "headquarter",
+    "lat": 51.47245,
+    "lng": 6.048683,
+    "weeklyHours": [
+      { "day": "monday", "hours": "09:00 - 18:00" },
+      { "day": "tuesday", "hours": "09:00 - 18:00" },
+      { "day": "wednesday", "hours": "09:00 - 18:00" },
+      { "day": "thursday", "hours": "09:00 - 18:00" },
+      { "day": "friday", "hours": "09:00 - 18:00" },
+      { "day": "saturday", "hours": "10:00 - 17:00" },
+      { "day": "sunday", "hours": "Closed" }
+    ]
+  },
+  {
+    "id": 2,
     "name": "BCS Racing",
     "address": "Heerdstraat 38, 6111 AE St Joost",
     "phone": "+31 475 483 114",
@@ -18,7 +36,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "JHM-X Service",
     "address": "Burgemeester Rietmanstraat 10-12, 5421 JX Gemert",
     "phone": "+31 492 366 553",

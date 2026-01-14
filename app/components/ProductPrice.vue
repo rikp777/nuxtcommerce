@@ -63,7 +63,7 @@ const discountPercentage = computed(() => {
         <span class="text-[#5f5f5f] dark:text-[#a3a3a3] line-through" v-html="regularPrice"></span>
       </template>
       <template v-else>
-        <span v-html="regularPrice"></span>
+        <span class="text-brand text-lg" v-html="regularPrice"></span>
       </template>
     </div>
 

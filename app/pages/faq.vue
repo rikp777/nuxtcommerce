@@ -31,7 +31,7 @@ const toggle = (index: number) => {
 <template>
   <div class="flex justify-center w-full min-h-screen pb-20">
 
-    <div class="flex flex-col w-full max-w-[1400px] mx-3 lg:mx-5 mt-5">
+    <div class="flex flex-col w-full max-w-[1800px] mx-3 lg:mx-5 mt-5">
       <PageHero
           :title="$t('store.faq.title')"
           :subtitle="$t('store.faq.subtitle')"

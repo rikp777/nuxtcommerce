@@ -161,7 +161,7 @@ const { handleAddToCart, addToCartButtonStatus } = useCart();
               <div v-for="(typeNode, i) in product.productTypes.nodes" :key="i" class="contents">
                 <div v-for="(vars, j) in typeNode.products.nodes" :key="j" class="contents">
                   <NuxtLink
-                      :to="localePath(`/product/${vars.slug}-${product.sku.split('-')[0]}`)"
+                      :to="localePath(`/products/${vars.slug}-${product.sku.split('-')[0]}`)"
                       :class="[
                        'flex flex-col w-24 rounded-lg border-2 select-varitaion transition-all duration-200 bg-neutral-100 dark:bg-neutral-800 p-1 gap-1.5',
                       vars.allPaColor.nodes[0].name === product.allPaColor.nodes[0].name
@@ -328,7 +328,7 @@ const { handleAddToCart, addToCartButtonStatus } = useCart();
 
   <div class="text-lg lg:text-xl lg:text-center font-semibold mt-10 px-3">{{ $t('product.shop_similar') }}</div>
   <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7 gap-4 px-3 lg:px-5 xl:px-8 mt-4 lg:mt-5 mb-10">
-    <ProductCard :products="product.related?.nodes" />
+    <ProductCards :products="product.related?.nodes" />
     <ProductsSkeleton v-if="!product.name" />
   </div>
 </template>
@@ -343,9 +343,9 @@ const { handleAddToCart, addToCartButtonStatus } = useCart();
 .swiper-pagination-bullet-active { @apply !bg-white !opacity-100 !w-6 rounded-full; }
 
 .button-bezel {
-  background: theme('colors.alizarin-crimson.700');
+  background: theme('colors.brand');
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 2px 4px rgba(0,0,0,0.1);
-  @apply hover:bg-alizarin-crimson-600 transition-colors;
+  @apply hover:bg-green-500 transition-colors;
 }
 
 .description ul { @apply list-disc list-inside space-y-1 ml-2; }

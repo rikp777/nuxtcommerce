@@ -16,13 +16,13 @@ const resetSearch = () => {
     </div>
     <div v-if="route.query.category && route.query.q" class="font-extrabold text-3xl my-6 text-center">
       {{ $t('search.no_products_matching') }}
-      <strong class="text-alizarin-crimson-700">"{{ route.query.q }}"</strong>
+      <strong class="text-brand">"{{ route.query.q }}"</strong>
       -
-      <strong class="text-alizarin-crimson-700">{{ route.query.category }}</strong>
+      <strong class="text-brand">{{ route.query.category }}</strong>
     </div>
     <div v-else-if="route.query.q" class="font-extrabold text-3xl my-6">
       {{ $t('search.no_products_found_matching') }}
-      <strong class="text-alizarin-crimson-700">"{{ route.query.q }}"</strong>
+      <strong class="text-brand">"{{ route.query.q }}"</strong>
     </div>
     <div v-else class="font-extrabold text-3xl my-6">{{ $t('search.no_products_found') }}</div>
     <div class="text-center mb-5 max-w-md">

@@ -1,15 +1,13 @@
 <script setup lang="ts">
 const { tm, rt } = useI18n();
-const { company } = useAppConfig()
-const config = useRuntimeConfig()
+const { company } = useAppConfig();
+const config = useRuntimeConfig();
+const localePath = useLocalePath();
+
+const companyData = company as Company;
 
 if (!config.public.enable.legal) {
   throw createError({ statusCode: 404, statusMessage: 'Page Not Found' });
-}
-
-interface LegalSection {
-  title: string;
-  desc: string;
 }
 
 const hasAnalytics = computed(() => {
@@ -18,10 +16,16 @@ const hasAnalytics = computed(() => {
 })
 
 const legalItems = computed(() => {
-  const sections = tm('store.legal.sections') as LegalSection[];
-  return sections.map(section => ({
+  const rawSections = tm('store.legal.sections');
+  if (!rawSections) return [];
+
+  const sections = Array.isArray(rawSections) ? rawSections : Object.values(rawSections);
+
+  const companyName = companyData.legalName || companyData.name;
+
+  return sections.map((section: any) => ({
     title: rt(section.title),
-    desc: rt(section.desc)
+    desc: rt(section.desc, { company: companyName })
   }));
 });
 </script>
@@ -50,8 +54,8 @@ const legalItems = computed(() => {
             <h2 class="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white">
               {{ item.title }}
             </h2>
-            <div v-if="item.title.includes('GDPR')" class="mt-8 flex flex-col gap-3">
 
+            <div v-if="item.title.includes('GDPR')" class="mt-8 flex flex-col gap-3">
               <div class="flex items-start gap-3 p-3 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800">
                 <UIcon name="i-heroicons-user-circle" class="w-6 h-6 shrink-0 text-gray-700 dark:text-gray-300" />
                 <div>
@@ -63,7 +67,6 @@ const legalItems = computed(() => {
                   </p>
                 </div>
               </div>
-
               <div class="flex items-start gap-3 p-3 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800">
                 <UIcon name="i-heroicons-trash" class="w-6 h-6 shrink-0 text-gray-700 dark:text-gray-300" />
                 <div>
@@ -75,20 +78,22 @@ const legalItems = computed(() => {
                   </p>
                 </div>
               </div>
-
               <div class="flex items-start gap-3 p-3 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800">
                 <UIcon name="i-heroicons-envelope" class="w-6 h-6 shrink-0 text-gray-700 dark:text-gray-300" />
                 <div>
                   <h4 class="font-bold text-gray-900 dark:text-white text-xs uppercase tracking-wide mb-1">
                     {{ $t('store.legal.gdpr.contact_title') }}
                   </h4>
-                  <a :href="`mailto:${company.contact.email}`" class="text-xs text-primary-600 dark:text-primary-400 hover:underline leading-snug">
+                  <NuxtLink :to="localePath('/contact')" class="text-xs text-brand hover:underline leading-snug">
                     {{ $t('store.legal.gdpr.contact_desc') }}
-                  </a>
+                  </NuxtLink>
+                  <p class="text-xs text-brand hover:underline leading-snug">
+                    <a :href="`mailto:${ companyData.contact.email }`">{{ companyData.contact.email }}</a>
+                  </p>
                 </div>
               </div>
-
             </div>
+
             <div v-if="item.title.toLowerCase().includes('cookie')" class="mt-8 grid grid-cols-1 sm:grid-cols-1 gap-4">
               <div class="flex items-start gap-4 p-4 rounded-2xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800">
                 <UIcon name="i-logos-woocommerce-icon" class="w-8 h-8 shrink-0" />
@@ -116,10 +121,8 @@ const legalItems = computed(() => {
               {{ item.desc }}
             </div>
           </div>
-
         </div>
       </div>
-
     </div>
   </div>
 </template>

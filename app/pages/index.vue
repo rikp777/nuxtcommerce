@@ -1,116 +1,94 @@
-<!--app/pages/index.vue-->
-<script setup>
-const route = useRoute();
-const { name } = useAppConfig().site;
-const url = useRequestURL();
-const canonical = computed(() => {
-  const base = `${url.origin}${url.pathname}`;
-  const params = new URLSearchParams();
-  if (typeof route.query.q === 'string' && route.query.q) params.set('q', route.query.q);
-  if (typeof route.query.category === 'string' && route.query.category) params.set('category', route.query.category);
-  const query = params.toString();
-  return query ? `${base}?${query}` : base;
-});
+<script setup lang="ts">
+const highlightedProducts = [
+  { slug: '79bike-falcon-pro-geel-zwart', sku: '792001' },
+  { slug: '79bike-falcon-pro', sku: '792001' },
+  { slug: 'bbx-20-3', sku: '222000' },
+  { slug: 'bbx-20-3', sku: '222000' }
+];
 
-useHead(() => {
-  const q = typeof route.query.q === 'string' ? route.query.q : undefined;
-  const category = typeof route.query.category === 'string' ? route.query.category : undefined;
+const products = ref([]);
+const isLoading = ref(true);
 
-  let title = '';
-  let description = '';
-  const keywords = new Set(['ecommerce', name]);
-
-  if (category) {
-    title = `${category} Products`;
-    description = `Browse ${category} products on ${name}.`;
-    keywords.add(category);
-  }
-
-  if (q) {
-    title = `Search results for "${q}"`;
-    description = `Search results for "${q}" on ${name}.`;
-    keywords.add(q);
-  }
-
-  const canonicalUrl = canonical.value;
-
-  return {
-    title,
-    ogTitle: title,
-    description,
-    ogDescription: description,
-    ogUrl: canonicalUrl,
-    canonical: canonicalUrl,
-    keywords: Array.from(keywords).join(', '),
-    twitterTitle: title,
-    twitterDescription: description,
-    ogImage: 'https://commerce.nuxt.dev/social-card.jpg',
-    twitterImage: 'https://commerce.nuxt.dev/social-card.jpg',
-  };
-});
-
-const productsData = ref([]);
-const isLoading = ref(false);
-const hasFetched = ref(false);
-const tailEl = ref(null);
-const pageInfo = ref({ hasNextPage: true, endCursor: null });
-
-const variables = computed(() => ({
-  search: route.query.q,
-  order: route.query.orderby?.toUpperCase() || 'DESC',
-  field: route.query.fieldby?.toUpperCase() || 'DATE',
-  category: route.query.category,
-  after: pageInfo.value.endCursor,
-}));
-
-async function fetch() {
-  if (isLoading.value || !pageInfo.value.hasNextPage) return;
-  isLoading.value = true;
-
+const fetchHighlightedProducts = async () => {
   try {
-    const response = await $fetch('/api/products', {
-      query: variables.value,
-    });
-    productsData.value.push(...response.products.nodes);
-    pageInfo.value = response.products.pageInfo;
-    hasFetched.value = true;
+    const results = await Promise.all(
+        highlightedProducts.map(item =>
+            $fetch('/api/product', { query: { slug: item.slug, sku: item.sku } })
+                .then(data => data.product)
+                .catch(() => null)
+        )
+    );
+    // Filter nulls eruit (voor het geval een product niet gevonden wordt)
+    products.value = results.filter(p => p !== null);
+  } catch (error) {
+    console.error('Error fetching highlighted products', error);
   } finally {
     isLoading.value = false;
   }
-}
+};
 
-onMounted(fetch);
-
-useIntervalFn(() => {
-  if (!tailEl.value || isLoading.value) return;
-  const { top } = tailEl.value.getBoundingClientRect();
-  if (top - window.innerHeight < 400) {
-    fetch();
-  }
-}, 500);
-
-watch(
-  () => route.query,
-  () => {
-    productsData.value = [];
-    pageInfo.value = { hasNextPage: true, endCursor: null };
-    fetch();
-  }
-);
-
-const products = computed(() => productsData.value);
-const productsEmpty = computed(() => hasFetched.value && !isLoading.value && productsData.value.length === 0);
+onMounted(() => {
+  fetchHighlightedProducts();
+});
 </script>
 
 <template>
-  <div class="flex items-center pl-3 lg:pl-5">
-    <ButtonSortBy />
-    <ButtonSelectCategory />
+  <div class="relative w-full min-h-screen flex flex-col">
+
+    <div class="fixed inset-0 w-full h-full overflow-hidden z-0">
+      <video
+          autoplay
+          loop
+          muted
+          playsinline
+          class="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/videos/intro.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/30"></div>
+    </div>
+
+    <div class="relative z-10 md:container mx-auto px-4 py-20 lg:py-32 flex flex-col justify-end min-h-screen">
+
+      <div class="mb-12 max-w-2xl">
+        <span class="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-white uppercase bg-brand rounded-lg shadow-lg shadow-brand/20">
+          New Collection
+        </span>
+        <h1 class="text-5xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
+          Experience the <br/> future of riding.
+        </h1>
+        <p class="text-lg text-neutral-200 max-w-lg leading-relaxed">
+          Discover our latest models designed for performance, comfort, and style.
+          Your journey starts here.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+        <template v-if="isLoading">
+          <div
+              v-for="i in 4"
+              :key="i"
+              class="bg-white/50 dark:bg-white/5 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-[32px] p-4 h-[800px] animate-pulse"
+          ></div>
+        </template>
+
+        <template v-else>
+          <ProductCard
+              v-for="product in products"
+              :key="product.databaseId"
+              :product="product"
+              class="
+                bg-white/80 dark:bg-black/40
+                backdrop-blur-md
+                border border-white/40 dark:border-white/10
+                rounded-[32px] p-6 h-full
+              "
+          />
+        </template>
+
+      </div>
+
+    </div>
   </div>
-  <div v-if="!productsEmpty" class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7 gap-3 lg:gap-5 p-3 lg:p-5">
-    <ProductCard :products="products" />
-    <ProductsSkeleton v-if="(!products.length || isLoading) && !productsEmpty" />
-    <br ref="tailEl" />
-  </div>
-  <ProductsEmpty v-else />
 </template>

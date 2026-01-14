@@ -4,7 +4,8 @@
     "go_back": "Zurück",
     "loading": "Laden...",
     "show_less": "Weniger anzeigen",
-    "show_more": "Mehr anzeigen"
+    "show_more": "Mehr anzeigen",
+    "reset": "Zurücksetzen"
   },
   "theme": {
     "dark": "Dunkel",
@@ -111,7 +112,12 @@
     "closed": "Geschlossen",
     "call": "Anrufen",
     "navigate": "Route planen",
-    "opening_hours": "Öffnungszeiten"
+    "opening_hours": "Öffnungszeiten",
+    "types": {
+      "headquarter": "Hauptsitz",
+      "dealer": "Händler"
+    },
+    "reset_map": "Karte zurücksetzen"
   },
   "store": {
     "faq": {
@@ -166,7 +172,7 @@
       "sections": [
         {
           "title": "Datenschutzerklärung",
-          "desc": "Ihr Datenschutz ist uns wichtig. Es entspricht unserer Politik, Ihre Privatsphäre in Bezug auf alle Informationen zu respektieren, die wir auf unserer Website .hey und anderen von uns betriebenen Websites von Ihnen erfassen.\n\nWir fragen nur dann nach personenbezogenen Daten, wenn wir diese tatsächlich benötigen, um eine Dienstleistung für Sie zu erbringen. Wir erfassen sie auf faire und rechtmäßige Weise, mit Ihrem Wissen und Ihrer Zustimmung. Wir teilen Ihnen auch mit, warum wir sie erfassen und wie sie verwendet werden.\n\nWir bewahren die erfassten Informationen nur so lange auf, wie es für die Erbringung der von Ihnen angeforderten Dienstleistung erforderlich ist. Die von uns gespeicherten Daten schützen wir mit wirtschaftlich vertretbaren Mitteln, um Verlust und Diebstahl sowie unbefugten Zugriff, Offenlegung, Vervielfältigung, Verwendung oder Änderung zu verhindern.\n\nWir geben keine personenbezogenen Daten öffentlich oder an Dritte weiter, außer wenn dies gesetzlich vorgeschrieben ist."
+          "desc": "Ihr Datenschutz ist uns wichtig. Es entspricht unserer Politik, Ihre Privatsphäre in Bezug auf alle Informationen zu respektieren, die wir auf unserer Website { company } und anderen von uns betriebenen Websites von Ihnen erfassen.\n\nWir fragen nur dann nach personenbezogenen Daten, wenn wir diese tatsächlich benötigen, um eine Dienstleistung für Sie zu erbringen. Wir erfassen sie auf faire und rechtmäßige Weise, mit Ihrem Wissen und Ihrer Zustimmung. Wir teilen Ihnen auch mit, warum wir sie erfassen und wie sie verwendet werden.\n\nWir bewahren die erfassten Informationen nur so lange auf, wie es für die Erbringung der von Ihnen angeforderten Dienstleistung erforderlich ist. Die von uns gespeicherten Daten schützen wir mit wirtschaftlich vertretbaren Mitteln, um Verlust und Diebstahl sowie unbefugten Zugriff, Offenlegung, Vervielfältigung, Verwendung oder Änderung zu verhindern.\n\nWir geben keine personenbezogenen Daten öffentlich oder an Dritte weiter, außer wenn dies gesetzlich vorgeschrieben ist."
         },
         {
           "title": "GDPR/DSGVO-Konformität",
@@ -174,15 +180,15 @@
         },
         {
           "title": "Nutzungsbedingungen",
-          "desc": "1. Bedingungen\nDurch den Zugriff auf die Website unter .hey erklären Sie sich mit diesen Nutzungsbedingungen und allen geltenden Gesetzen und Vorschriften einverstanden und bestätigen, dass Sie für die Einhaltung aller geltenden lokalen Gesetze verantwortlich sind. Wenn Sie mit einer dieser Bedingungen nicht einverstanden sind, ist Ihnen die Nutzung oder der Zugriff auf diese Website untersagt.\n\n2. Nutzungslizenz\nEs wird die Erlaubnis erteilt, vorübergehend eine Kopie der Materialien (Informationen oder Software) auf der Website von .hey für den persönlichen, nicht-kommerziellen vorübergehenden Gebrauch herunterzuladen. Dies ist die Erteilung einer Lizenz, keine Übertragung des Eigentums, und im Rahmen dieser Lizenz dürfen Sie nicht:\n• die Materialien ändern oder kopieren;\n• die Materialien für kommerzielle Zwecke oder für öffentliche Vorführungen (kommerziell oder nicht-kommerziell) verwenden;\n• versuchen, die auf der Website von .hey enthaltene Software zu dekompilieren oder zurückzuentwickeln;\n• Urheberrechts- oder andere Eigentumskennzeichnungen von den Materialien entfernen; oder\n• die Materialien an eine andere Person übertragen oder auf einem anderen Server \"spiegeln\".\n\nDiese Lizenz erlischt automatisch, wenn Sie gegen eine dieser Einschränkungen verstoßen, und kann von .hey jederzeit gekündigt werden. Nach Beendigung der Einsichtnahme in diese Materialien oder nach Beendigung dieser Lizenz müssen Sie alle in Ihrem Besitz befindlichen heruntergeladenen Materialien vernichten, egal ob in elektronischer oder gedruckter Form."
+          "desc": "1. Bedingungen\nDurch den Zugriff auf die Website unter { company } erklären Sie sich mit diesen Nutzungsbedingungen und allen geltenden Gesetzen und Vorschriften einverstanden und bestätigen, dass Sie für die Einhaltung aller geltenden lokalen Gesetze verantwortlich sind. Wenn Sie mit einer dieser Bedingungen nicht einverstanden sind, ist Ihnen die Nutzung oder der Zugriff auf diese Website untersagt.\n\n2. Nutzungslizenz\nEs wird die Erlaubnis erteilt, vorübergehend eine Kopie der Materialien (Informationen oder Software) auf der Website von { company } für den persönlichen, nicht-kommerziellen vorübergehenden Gebrauch herunterzuladen. Dies ist die Erteilung einer Lizenz, keine Übertragung des Eigentums, und im Rahmen dieser Lizenz dürfen Sie nicht:\n• die Materialien ändern oder kopieren;\n• die Materialien für kommerzielle Zwecke oder für öffentliche Vorführungen (kommerziell oder nicht-kommerziell) verwenden;\n• versuchen, die auf der Website von { company } enthaltene Software zu dekompilieren oder zurückzuentwickeln;\n• Urheberrechts- oder andere Eigentumskennzeichnungen von den Materialien entfernen; oder\n• die Materialien an eine andere Person übertragen oder auf einem anderen Server \"spiegeln\".\n\nDiese Lizenz erlischt automatisch, wenn Sie gegen eine dieser Einschränkungen verstoßen, und kann von { company } jederzeit gekündigt werden. Nach Beendigung der Einsichtnahme in diese Materialien oder nach Beendigung dieser Lizenz müssen Sie alle in Ihrem Besitz befindlichen heruntergeladenen Materialien vernichten, egal ob in elektronischer oder gedruckter Form."
         },
         {
           "title": "Haftungsausschluss",
-          "desc": "Die Materialien auf der Website von .hey werden ohne Mängelgewähr bereitgestellt. .hey gibt keine Garantien, weder ausdrücklich noch stillschweigend, und lehnt hiermit alle anderen Garantien ab, einschließlich, aber nicht beschränkt auf stillschweigende Garantien oder Bedingungen der Marktgängigkeit, der Eignung für einen bestimmten Zweck oder der Nichtverletzung von geistigem Eigentum oder anderen Rechtsverletzungen.\n\nDarüber hinaus übernimmt .hey keine Garantie oder Zusicherung hinsichtlich der Genauigkeit, der voraussichtlichen Ergebnisse oder der Zuverlässigkeit der Verwendung der Materialien auf seiner Website oder anderweitig in Bezug auf diese Materialien oder auf Websites, die mit dieser Website verlinkt sind."
+          "desc": "Die Materialien auf der Website von { company } werden ohne Mängelgewähr bereitgestellt. { company } gibt keine Garantien, weder ausdrücklich noch stillschweigend, und lehnt hiermit alle anderen Garantien ab, einschließlich, aber nicht beschränkt auf stillschweigende Garantien oder Bedingungen der Marktgängigkeit, der Eignung für einen bestimmten Zweck oder der Nichtverletzung von geistigem Eigentum oder anderen Rechtsverletzungen.\n\nDarüber hinaus übernimmt { company } keine Garantie oder Zusicherung hinsichtlich der Genauigkeit, der voraussichtlichen Ergebnisse oder der Zuverlässigkeit der Verwendung der Materialien auf seiner Website oder anderweitig in Bezug auf diese Materialien oder auf Websites, die mit dieser Website verlinkt sind."
         },
         {
           "title": "Haftungsbeschränkungen",
-          "desc": "In keinem Fall haftet .hey oder seine Lieferanten für Schäden (einschließlich, aber nicht beschränkt auf Schäden aus Datenverlust oder entgangenem Gewinn oder aufgrund von Geschäftsunterbrechungen), die aus der Nutzung oder der Unfähigkeit zur Nutzung der Materialien auf der Website von .hey entstehen, selbst wenn .hey oder ein von .hey bevollmächtigter Vertreter mündlich oder schriftlich über die Möglichkeit solcher Schäden informiert wurde. Da einige Gerichtsbarkeiten keine Beschränkungen stillschweigender Garantien oder Haftungsbeschränkungen für Folgeschäden oder zufällige Schäden zulassen, gelten diese Beschränkungen möglicherweise nicht für Sie."
+          "desc": "In keinem Fall haftet { company } oder seine Lieferanten für Schäden (einschließlich, aber nicht beschränkt auf Schäden aus Datenverlust oder entgangenem Gewinn oder aufgrund von Geschäftsunterbrechungen), die aus der Nutzung oder der Unfähigkeit zur Nutzung der Materialien auf der Website von { company } entstehen, selbst wenn { company } oder ein von { company } bevollmächtigter Vertreter mündlich oder schriftlich über die Möglichkeit solcher Schäden informiert wurde. Da einige Gerichtsbarkeiten keine Beschränkungen stillschweigender Garantien oder Haftungsbeschränkungen für Folgeschäden oder zufällige Schäden zulassen, gelten diese Beschränkungen möglicherweise nicht für Sie."
         },
         {
           "title": "Geltendes Recht",
@@ -218,6 +224,10 @@
         "desc_1": "Bei {name} bauen wir nicht einfach nur elektrische Offroad-Bikes, wir schaffen Erlebnisse. Wir sind ein kleines, eingespieltes Team mit einer riesigen Leidenschaft für Abenteuer, Natur und Storytelling.",
         "desc_2": "Jedes Produkt, das wir entwerfen, und jeder Trip, den wir planen, kommt von Herzen. Wir wollen, dass Kinder und Erwachsene gleichermaßen von den Bildschirmen wegkommen und wieder Kontakt zu Schlamm, Geschwindigkeit und der Natur finden."
       },
+      "video": {
+        "title": "Unsere Geschichte in Bewegung",
+        "desc": "Verfolgen Sie unsere Reise, auf der wir Innovation mit dem Nervenkitzel des Abenteuers verbinden. Vom Reißbrett bis zu den unbefestigten Wegen – sehen Sie, wie {company} das elektrische Offroad-Biken zum Leben erweckt."
+      },
       "team": {
         "title": "Das Team"
       },
@@ -242,7 +252,24 @@
       }
     },
     "careers": "Karriere",
-    "contact": "Kontakt",
+    "contact": {
+      "title": "Kontaktieren Sie uns",
+      "form": {
+        "title": "Schreiben Sie uns eine Nachricht",
+        "subtitle": "Wir freuen uns, von Ihnen zu hören! Füllen Sie das Formular aus und wir melden uns so schnell wie möglich bei Ihnen.",
+        "inputs": {
+          "name": "Name",
+          "name_placeholder": "Ihr vollständiger Name",
+          "email": "E-Mail",
+          "email_placeholder": "Ihre E-Mail-Adresse",
+          "subject": "Betreff",
+          "subject_placeholder": "Betreff Ihrer Nachricht",
+          "message": "Nachricht",
+          "message_placeholder": "Ihre Nachricht"
+        },
+        "send": "Nachricht senden"
+      }
+    },
     "support": "Support"
   },
   "socials": {

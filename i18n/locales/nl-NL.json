@@ -4,7 +4,8 @@
     "go_back": "Ga terug",
     "loading": "Laden...",
     "show_less": "Toon minder",
-    "show_more": "Toon meer"
+    "show_more": "Toon meer",
+    "reset": "Reset"
   },
   "theme": {
     "dark": "Donker",
@@ -111,7 +112,12 @@
     "closed": "Gesloten",
     "call": "Bel",
     "navigate": "Navigeer",
-    "opening_hours": "Openingstijden"
+    "opening_hours": "Openingstijden",
+    "types": {
+      "headquarter": "Hoofdkantoor",
+      "dealer": "Dealer"
+    },
+    "reset_map": "Reset kaart"
   },
   "store": {
     "faq": {
@@ -166,7 +172,7 @@
       "sections": [
         {
           "title": "Privacybeleid",
-          "desc": "Uw privacy is belangrijk voor ons. Het is ons beleid om uw privacy te respecteren met betrekking tot alle informatie die we van u kunnen verzamelen op onze website, .hey, en andere sites die we bezitten en beheren.\n\nWe vragen alleen om persoonlijke informatie wanneer we deze echt nodig hebben om u een dienst te kunnen leveren. We verzamelen het op eerlijke en rechtmatige wijze, met uw medeweten en toestemming. We laten u ook weten waarom we het verzamelen en hoe het zal worden gebruikt.\n\nWe bewaren verzamelde informatie alleen zo lang als nodig is om u de gevraagde dienst te leveren. De gegevens die we opslaan, beschermen we binnen commercieel aanvaardbare middelen om verlies en diefstal te voorkomen, evenals ongeoorloofde toegang, openbaarmaking, kopiëren, gebruik of wijziging.\n\nWe delen geen persoonlijk identificeerbare informatie in het openbaar of met derden, behalve wanneer dit wettelijk vereist is."
+          "desc": "Uw privacy is belangrijk voor ons. Het is ons beleid om uw privacy te respecteren met betrekking tot alle informatie die we van u kunnen verzamelen op onze website, { company }, en andere sites die we bezitten en beheren.\n\nWe vragen alleen om persoonlijke informatie wanneer we deze echt nodig hebben om u een dienst te kunnen leveren. We verzamelen het op eerlijke en rechtmatige wijze, met uw medeweten en toestemming. We laten u ook weten waarom we het verzamelen en hoe het zal worden gebruikt.\n\nWe bewaren verzamelde informatie alleen zo lang als nodig is om u de gevraagde dienst te leveren. De gegevens die we opslaan, beschermen we binnen commercieel aanvaardbare middelen om verlies en diefstal te voorkomen, evenals ongeoorloofde toegang, openbaarmaking, kopiëren, gebruik of wijziging.\n\nWe delen geen persoonlijk identificeerbare informatie in het openbaar of met derden, behalve wanneer dit wettelijk vereist is."
         },
         {
           "title": "GDPR/AVG Naleving",
@@ -174,15 +180,15 @@
         },
         {
           "title": "Algemene Voorwaarden",
-          "desc": "1. Voorwaarden\nDoor de website op .hey te bezoeken, gaat u akkoord met deze algemene voorwaarden, alle toepasselijke wet- en regelgeving, en stemt u ermee in dat u verantwoordelijk bent voor de naleving van alle toepasselijke lokale wetten. Als u niet akkoord gaat met een van deze voorwaarden, is het u verboden deze site te gebruiken of te bezoeken.\n\n2. Gebruikslicentie\nEr wordt toestemming verleend om tijdelijk één exemplaar van de materialen (informatie of software) op de website van .hey te downloaden voor persoonlijk, niet-commercieel tijdelijk bekijken. Dit is het verlenen van een licentie, geen eigendomsoverdracht, en onder deze licentie mag u niet:\n• de materialen wijzigen of kopiëren;\n• de materialen gebruiken voor commerciële doeleinden, of voor enige openbare vertoning (commercieel of niet-commercieel);\n• proberen software op de website van .hey te decompileren of te reverse-engineeren;\n• auteursrechtelijke of andere eigendomsvermeldingen van de materialen verwijderen; of\n• de materialen overdragen aan een andere persoon of de materialen \"spiegelen\" op een andere server.\n\nDeze licentie wordt automatisch beëindigd als u een van deze beperkingen overtreedt en kan op elk moment door .hey worden beëindigd. Bij beëindiging van uw bezichtiging van deze materialen of bij beëindiging van deze licentie, moet u alle gedownloade materialen in uw bezit vernietigen, ongeacht of deze in elektronisch of gedrukt formaat zijn."
+          "desc": "1. Voorwaarden\nDoor de website op { company } te bezoeken, gaat u akkoord met deze algemene voorwaarden, alle toepasselijke wet- en regelgeving, en stemt u ermee in dat u verantwoordelijk bent voor de naleving van alle toepasselijke lokale wetten. Als u niet akkoord gaat met een van deze voorwaarden, is het u verboden deze site te gebruiken of te bezoeken.\n\n2. Gebruikslicentie\nEr wordt toestemming verleend om tijdelijk één exemplaar van de materialen (informatie of software) op de website van { company } te downloaden voor persoonlijk, niet-commercieel tijdelijk bekijken. Dit is het verlenen van een licentie, geen eigendomsoverdracht, en onder deze licentie mag u niet:\n• de materialen wijzigen of kopiëren;\n• de materialen gebruiken voor commerciële doeleinden, of voor enige openbare vertoning (commercieel of niet-commercieel);\n• proberen software op de website van { company } te decompileren of te reverse-engineeren;\n• auteursrechtelijke of andere eigendomsvermeldingen van de materialen verwijderen; of\n• de materialen overdragen aan een andere persoon of de materialen \"spiegelen\" op een andere server.\n\nDeze licentie wordt automatisch beëindigd als u een van deze beperkingen overtreedt en kan op elk moment door { company } worden beëindigd. Bij beëindiging van uw bezichtiging van deze materialen of bij beëindiging van deze licentie, moet u alle gedownloade materialen in uw bezit vernietigen, ongeacht of deze in elektronisch of gedrukt formaat zijn."
         },
         {
           "title": "Disclaimer",
-          "desc": "De materialen op de website van .hey worden geleverd op een 'as is' basis. .hey geeft geen garanties, expliciet of impliciet, en wijst hierbij alle andere garanties af, inclusief maar niet beperkt tot impliciete garanties of voorwaarden van verkoopbaarheid, geschiktheid voor een bepaald doel, of niet-inbreuk op intellectueel eigendom of andere schending van rechten.\n\nVerder geeft .hey geen garanties en doet geen uitspraken over de nauwkeurigheid, waarschijnlijke resultaten of betrouwbaarheid van het gebruik van de materialen op haar website of anderszins met betrekking tot dergelijke materialen of op sites die aan deze site zijn gekoppeld."
+          "desc": "De materialen op de website van { company } worden geleverd op een 'as is' basis. { company } geeft geen garanties, expliciet of impliciet, en wijst hierbij alle andere garanties af, inclusief maar niet beperkt tot impliciete garanties of voorwaarden van verkoopbaarheid, geschiktheid voor een bepaald doel, of niet-inbreuk op intellectueel eigendom of andere schending van rechten.\n\nVerder geeft { company } geen garanties en doet geen uitspraken over de nauwkeurigheid, waarschijnlijke resultaten of betrouwbaarheid van het gebruik van de materialen op haar website of anderszins met betrekking tot dergelijke materialen of op sites die aan deze site zijn gekoppeld."
         },
         {
           "title": "Beperkingen",
-          "desc": "In geen geval zal .hey of haar leveranciers aansprakelijk zijn voor enige schade (inclusief, zonder beperking, schade door verlies van gegevens of winst, of als gevolg van bedrijfsonderbreking) voortvloeiend uit het gebruik of het onvermogen om de materialen op de website van .hey te gebruiken, zelfs als .hey of een door .hey geautoriseerde vertegenwoordiger mondeling of schriftelijk op de hoogte is gesteld van de mogelijkheid van dergelijke schade. Omdat sommige rechtsgebieden geen beperkingen op impliciete garanties of beperkingen van aansprakelijkheid voor gevolgschade of incidentele schade toestaan, zijn deze beperkingen mogelijk niet op u van toepassing."
+          "desc": "In geen geval zal { company } of haar leveranciers aansprakelijk zijn voor enige schade (inclusief, zonder beperking, schade door verlies van gegevens of winst, of als gevolg van bedrijfsonderbreking) voortvloeiend uit het gebruik of het onvermogen om de materialen op de website van { company } te gebruiken, zelfs als { company } of een door { company } geautoriseerde vertegenwoordiger mondeling of schriftelijk op de hoogte is gesteld van de mogelijkheid van dergelijke schade. Omdat sommige rechtsgebieden geen beperkingen op impliciete garanties of beperkingen van aansprakelijkheid voor gevolgschade of incidentele schade toestaan, zijn deze beperkingen mogelijk niet op u van toepassing."
         },
         {
           "title": "Toepasselijk recht",
@@ -218,6 +224,10 @@
         "desc_1": "Bij {name} bouwen we niet zomaar elektrische offroad bikes; we creëren ervaringen. We zijn een klein, hecht team met een enorme passie voor avontuur, natuur en sterke verhalen.",
         "desc_2": "Elk product dat we ontwerpen en elke trip die we plannen komt recht uit het hart. We willen dat zowel kinderen als volwassenen loskomen van hun schermen en weer in contact komen met de modder, de snelheid en de buitenlucht."
       },
+      "video": {
+        "title": "Ons verhaal in beweging",
+        "desc": "Bekijk hoe onze reis zich ontvouwt terwijl we innovatie combineren met de spanning van avontuur. Van de tekentafel tot de onverharde paden, zie hoe {company} elektrisch offroad fietsen tot leven brengt."
+      },
       "team": {
         "title": "Ontmoet de Crew"
       },
@@ -242,7 +252,24 @@
       }
     },
     "careers": "Vacatures",
-    "contact": "Contact",
+    "contact": {
+      "title": "Contacteer ons",
+      "form": {
+        "title": "Stuur ons een bericht",
+        "subtitle": "We horen graag van je! Vul het onderstaande formulier in en we nemen zo snel mogelijk contact met je op.",
+        "inputs": {
+          "name": "Naam",
+          "name_placeholder": "Je volledige naam",
+          "email": "E-mail",
+          "email_placeholder": "Je e-mailadres",
+          "subject": "Onderwerp",
+          "subject_placeholder": "Onderwerp van je bericht",
+          "message": "Bericht",
+          "message_placeholder": "Je bericht"
+        },
+        "send": "Verstuur bericht"
+      }
+    },
     "support": "Klantenservice"
   },
   "socials": {

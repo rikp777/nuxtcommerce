@@ -19,7 +19,7 @@ const hasResults = computed(() => searchResults.value.length > 0);
 const navigateToSearch = () => {
   suggestionMenu.value = false;
   router.push({
-    path: localePath('/'),
+    path: localePath('/products/'),
     query: { ...route.query, q: searchQuery.value || undefined }
   });
 };
@@ -71,7 +71,7 @@ onClickOutside(cartContainer, () => (cartModal.value = false));
           class="group flex min-h-12 min-w-12 items-center justify-center rounded-2xl transition active:scale-95 hover:bg-black/5 dark:hover:bg-white/15 max-lg:rounded-full lg:min-h-[52px] lg:min-w-[52px]"
       >
         <img
-            class="h-16 w-16 transition-transform duration-500 ease-in-out group-hover:rotate-[360deg] group-hover:scale-110"
+            class="h-12 w-12 p-1 transition-transform duration-500 ease-in-out group-hover:rotate-[240deg] group-hover:scale-110"
             src="/logo.svg"
             alt="Logo"
             loading="lazy"
@@ -173,7 +173,7 @@ onClickOutside(cartContainer, () => (cartModal.value = false));
               v-for="(product, i) in searchResults"
               :key="i"
               @click="suggestionMenu = false"
-              :to="localePath(`/product/${product.slug}-${product.sku.split('-')[0]}`)"
+              :to="localePath(`/products/${product.slug}-${product.sku.split('-')[0]}`)"
               class="group cursor-pointer select-none"
           >
             <div class="relative overflow-hidden rounded-2xl pb-[133%] dark:shadow-[0_8px_24px_rgba(0,0,0,.5)]">

@@ -1,4 +1,3 @@
-// app/gql/queries/getCategories.ts
 import { gql } from 'nuxt-graphql-request/utils';
 
 export const getCategoriesQuery = gql`
@@ -7,6 +6,7 @@ export const getCategoriesQuery = gql`
       nodes {
         id
         name
+        count 
         image {
           sourceUrl
         }
@@ -18,6 +18,7 @@ export const getCategoriesQuery = gql`
         children(first: 100, where: { orderby: COUNT, order: DESC }) {
           nodes {
             name
+            count
             image {
               sourceUrl
             }
@@ -29,6 +30,7 @@ export const getCategoriesQuery = gql`
             children(first: 100, where: { orderby: COUNT, order: DESC }) {
               nodes {
                 name
+                count
                 image {
                   sourceUrl
                 }

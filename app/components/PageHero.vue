@@ -8,22 +8,29 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="relative w-full h-[300px] lg:h-[400px] rounded-[32px] overflow-hidden mb-12 shadow-sm group">
+  <div class="relative w-full h-[300px] lg:h-[400px] rounded-[32px] overflow-hidden mb-12 shadow-sm group border border-gray-200 dark:border-neutral-800">
+
     <NuxtImg
         :src="imageSrc"
         :alt="title"
         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
     />
-    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
 
-    <div class="absolute bottom-0 left-0 p-8 lg:p-12 max-w-2xl z-10">
-      <span class="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-white uppercase bg-brand rounded-full">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+
+    <div class="absolute bottom-0 left-0 p-8 lg:p-12 max-w-2xl z-10 flex flex-col items-start">
+      <span
+          v-if="tagline"
+          class="inline-block px-3 py-1.5 mb-5 text-xs font-bold tracking-wider text-white uppercase bg-brand rounded-lg shadow-lg shadow-brand/20"
+      >
         {{ tagline }}
       </span>
-      <h1 class="text-4xl lg:text-6xl font-bold text-white mb-4 tracking-tight">
+
+      <h1 class="text-4xl lg:text-6xl font-bold text-white mb-4 tracking-tight leading-tight">
         {{ title }}
       </h1>
-      <p class="text-lg text-white/80 leading-relaxed font-medium" v-if="subtitle">
+
+      <p class="text-lg text-neutral-200 leading-relaxed font-medium max-w-lg" v-if="subtitle">
         {{ subtitle }}
       </p>
     </div>
@@ -31,5 +38,4 @@ const props = defineProps<{
 </template>
 
 <style scoped lang="postcss">
-
 </style>

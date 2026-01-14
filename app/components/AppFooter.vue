@@ -18,7 +18,7 @@ const footerLinks = computed(() => {
   const supportLinks = [
     {label: t('product.shipping_returns'), to: '/shipping'},
     {label: t('store.faq.title'), to: '/faq'},
-    {label: t('company.contact'), to: '/contact'},
+    {label: t('company.contact.title'), to: '/contact'},
     ...(config.public.enable.legal ? [{label: t('store.legal.title'), to: '/legal'}] : []),
   ];
 
@@ -32,7 +32,14 @@ const footerLinks = computed(() => {
 </script>
 
 <template>
-  <footer class="mt-auto m-4 p-8 bg-neutral-200/60 dark:bg-white/5 rounded-2xl backdrop-blur-sm">
+  <footer class="
+    mt-auto m-4 p-8
+    bg-white/80 dark:bg-black/60
+    backdrop-blur-md
+    border border-white/40 dark:border-white/10
+    rounded-2xl
+    relative z-20
+  ">
     <div class="container mx-auto max-w-7xl">
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">

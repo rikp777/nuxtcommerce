@@ -1,6 +1,21 @@
 <script setup lang="ts">
 const config = useRuntimeConfig();
 const appConfig = useAppConfig();
+const { locale } = useI18n();
+
+const developerUrl = computed(() => {
+  const currentLocale = locale.value;
+
+  let langPrefix = '/en';
+
+  if (currentLocale === 'nl') {
+    langPrefix = '';
+  } else if (['de', 'be', 'en'].includes(currentLocale)) {
+    langPrefix = `/${currentLocale}`;
+  }
+
+  return `https://www.dothey.nl${langPrefix}/devs/rik-peeters`;
+});
 </script>
 
 <template>
@@ -14,8 +29,9 @@ const appConfig = useAppConfig();
     </a>
     —
     {{ $t('footer.developed_by_author') }}
+
     <a class="transition-all hover:text-black hover:dark:text-neutral-100 underline decoration-dotted underline-offset-4"
-       :href="appConfig.developer.social.linkedin"
+       :href="developerUrl"
        target="_blank">
       {{ appConfig.developer.name }}
     </a>

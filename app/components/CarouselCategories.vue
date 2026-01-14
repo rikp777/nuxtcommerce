@@ -14,7 +14,16 @@ const isDragging = ref(false);
 const dragThreshold = 10;
 let startX, scrollLeft;
 
-const colors = ['bg-[#dad5ff]', 'bg-[#ffe2eb]', 'bg-[#ffe4c2]', 'bg-[#fffd92]', 'bg-[#cfffcb]', 'bg-[#dbfff6]', 'bg-[#d7edff]'];
+const colors = [
+  'bg-[#0f766e]',
+  'bg-[#0d9488]',
+  'bg-[#14b8a6]',
+  'bg-[#2dd4bf]',
+  'bg-[#5eead4]',
+  'bg-[#99f6e4]',
+  'bg-[#ccfbf1]',
+  'bg-[#f0fdfa]'
+];
 
 const setCategory = category => {
   if (!isDragging.value && (route.query.category || '') !== category) {
@@ -72,7 +81,7 @@ onBeforeUnmount(() => {
           @click="setCategory('')"
           :class="[
             'card ml-2 lg:ml-4 transition',
-            !route.query.category ? 'selected' : 'bg-[#efefef] hover:bg-[#e2e2e2] dark:bg-[#262626] hover:dark:bg-[#333] text-black dark:text-white',
+            !route.query.category ? 'selected' : 'bg-brand hover:bg-brand-d dark:bg-brand-d hover:dark:bg-brand text-black dark:text-white',
           ]">
           <div class="px-3.5">{{ $t('filter.all_categories') }}</div>
         </div>
@@ -102,7 +111,7 @@ img {
 }
 
 .selected {
-  @apply bg-red-600 lg:hover:bg-red-700 text-white dark:bg-alizarin-crimson-700 lg:hover:dark:bg-alizarin-crimson-800;
+  @apply bg-brand lg:hover:bg-brand-d text-white dark:bg-brand-d lg:hover:dark:bg-brand;
 }
 
 .slider-container {

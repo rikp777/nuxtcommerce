@@ -1,23 +1,30 @@
 <p align="center">
-  <a href="https://commerce.nuxt.dev" target="_blank" rel="noopener">
+  <a href="#" target="_blank" rel="noopener">
     <img alt="NuxtCommerce – Headless storefront for WooCommerce" src="https://github.com/user-attachments/assets/1c6720b7-5aea-4f6b-be55-8944fb81799a">
   </a>
 </p>
 
-<h1 align="center">NuxtCommerce</h1>
+<h1 align="center">NuxtCommerce (Active Fork)</h1>
 
 <p align="center">
   Modern, open-source headless storefront for WooCommerce — built with <strong>Nuxt 4</strong> & <strong>GraphQL</strong>.<br/>
   Pinterest-style UI, dark mode, multi-language, and a DX focused, production-ready setup.
   <br/><br/>
-  <a href="https://commerce.nuxt.dev"><strong>🚀 Live Demo</strong></a>
+  <strong>📢 This is the actively maintained hard fork of the original project.</strong>
   <br/><br/>
-  <a href="https://github.com/zackha/nuxtcommerce/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/zackha/nuxtcommerce?style=flat&color=ff4757"></a>
-  <a href="https://github.com/zackha/nuxtcommerce/issues"><img alt="Issues" src="https://img.shields.io/github/issues/zackha/nuxtcommerce?style=flat"></a>
+  <a href="https://github.com/rikp777/nuxtcommerce/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/rikp777/nuxtcommerce?style=flat&color=ff4757"></a>
+  <a href="https://github.com/rikp777/nuxtcommerce/issues"><img alt="Issues" src="https://img.shields.io/github/issues/rikp777/nuxtcommerce?style=flat"></a>
   <img alt="Built with Nuxt" src="https://img.shields.io/badge/Nuxt-238636?logo=nuxt&logoColor=white&style=flat"/>
   <img alt="GraphQL" src="https://img.shields.io/badge/GraphQL-E10098?logo=graphql&logoColor=white&style=flat"/>
   <img alt="WooCommerce" src="https://img.shields.io/badge/WooCommerce-96588A?logo=woo&logoColor=white&style=flat"/>
 </p>
+
+## ⚠️ About this Fork
+
+This is a **Hard Fork** of the original NuxtCommerce.
+**Goal:** Active maintenance and refactoring the codebase towards **Functional Programming (FP)**, **SOLID** principles, and **DRY** architecture.
+
+Pull Requests are reviewed and merged actively.
 
 ## Table of Contents
 
@@ -30,8 +37,7 @@
 * [API Endpoints (Server)](#api-endpoints-server)
 * [Internationalization (i18n)](#internationalization-i18n)
 * [Performance & Caching](#performance--caching)
-* [Contributors & Acknowledgements](#-contributors--acknowledgements)
-* [Contact](#contact)
+* [Contributors](#-contributors)
 
 ## Features
 
@@ -58,7 +64,7 @@
 * **Deployment (optional):** NuxtHub + Cloudflare Workers
 
 > Project scripts live in `package.json` (`dev`, `dev:ssl`, `build`, `generate`, `preview`, `deploy`).
-
+> 
 ## Quickstart
 
 ### Requirements
@@ -70,7 +76,7 @@
 ### 1) Clone & install
 
 ```bash
-git clone https://github.com/zackha/nuxtcommerce.git
+git clone https://github.com/rikp777/nuxtcommerce.git
 cd nuxtcommerce
 pnpm install
 ```
@@ -249,27 +255,12 @@ Client (`$fetch` to `/api/*`) → Nitro server proxies to WPGraphQL → GET endp
 * Image optimization via `@nuxt/image`
 * Prerender: `/`, `/sitemap.xml`, `/robots.txt`
 
-## 🙌 Contributors & Acknowledgements
+# 🙌 Contributors
 
-We sincerely thank everyone who has contributed to **NuxtCommerce**.
-Your support, feedback, and ideas keep this project moving forward. 🚀
-
-✨ **Special thanks**
-
-|                                                    Collaborator                                                    |
-| :----------------------------------------------------------------------------------------------------------------: |
-| [<img src="https://github.com/rikp777.png?size=115" width=115><br><sub>@rikp777</sub>](https://github.com/rikp777) |
-
-<sub>More contributors will be highlighted here as the project grows.</sub>
+We sincerely thank everyone who has contributed to the original NuxtCommerce and this active fork.
 
 ## Contact
 
 Have questions or suggestions?
 
-* Email: **[zckhtln@icloud.com](mailto:zckhtln@icloud.com)**
-* X (Twitter): [**@ZHatlen**](https://twitter.com/ZHatlen)
-
-
-> **Note**  
-> You can view the orders you create during the live demo at [NuxtCommerce Admin](https://nuxtcommerce-admin.vercel.app/).  
-> From there, you can also update their statuses and add notes to your orders.
+* Email: **[info@dothey.nl](mailto:info@dothey.nl)**

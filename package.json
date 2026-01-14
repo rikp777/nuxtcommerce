@@ -1,8 +1,8 @@
 {
-  "name": "nuxtcommerce",
-  "version": "3.1.17",
+  "name": "@rikp777/nuxtcommerce",
+  "version": "3.2.0",
   "private": true,
-  "author": "zackha",
+  "author": "rikp777",
   "description": "Headless storefront for Woocommerce (Nuxt/Vue)",
   "type": "module",
   "scripts": {

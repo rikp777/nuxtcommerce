@@ -8,6 +8,8 @@ export default <Partial<Config>>{
         '3xl': '1920px',
       },
       colors: {
+        'brand': '#2563eb',
+        'brand-d': '#1d4ed8',
         'secondary-text': '#737373',
         'secondary-text-d': '#a8a8a8',
         'alizarin-crimson': {

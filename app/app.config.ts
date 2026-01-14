@@ -3,10 +3,9 @@ import companyData from './data/company.json';
 
 export default defineAppConfig({
     site: {
-        name: 'BBXtremeshop',
+        name: 'NuxtCommerce',
         logoLight: 'logo_light.png',
-        logoDark: 'logo_dark.png',
-        description: ''
+        logoDark: 'logo_dark.png'
     },
     ui: {
         primary: 'blue',

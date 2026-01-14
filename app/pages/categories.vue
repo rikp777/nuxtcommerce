@@ -55,6 +55,7 @@ const categories = computed(() => categoriesData.value);
         dark:from-black dark:via-black/80 dark:to-black/60
       "></div>
     </div>
+
     <div class="relative z-10 container mx-auto px-4 py-24 min-h-screen flex flex-col justify-center items-center">
 
       <h1 class="text-4xl lg:text-5xl font-bold text-white mb-12 text-center tracking-tight drop-shadow-lg">
@@ -65,7 +66,7 @@ const categories = computed(() => categoriesData.value);
 
         <template v-if="isLoading">
           <div v-for="i in 3" :key="i" class="w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.33%-22px)] max-w-[400px]">
-            <div class="bg-white/10 backdrop-blur-md border border-white/10 rounded-[32px] p-4 h-[450px] animate-pulse"></div>
+            <div class="bg-white/50 dark:bg-black/40 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-[32px] p-4 h-[450px] animate-pulse"></div>
           </div>
         </template>
 
@@ -76,8 +77,16 @@ const categories = computed(() => categoriesData.value);
               :to="localePath(`/products/?category=${encodeURIComponent(category.name)}`)"
               class="
                 w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.33%-22px)] max-w-[400px] group
-                bg-white/80 dark:bg-white/5 backdrop-blur-md
-                border border-white/20 dark:border-white/10
+
+                /* LIGHT MODE GLASS */
+                bg-white/80
+                border border-white/40
+
+                /* DARK MODE GLASS */
+                dark:bg-black/60
+                dark:border-white/10
+
+                backdrop-blur-md
                 rounded-[32px] p-4 flex flex-col
                 transition-transform duration-300 shadow-2xl cursor-pointer
               "

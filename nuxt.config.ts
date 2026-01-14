@@ -40,7 +40,8 @@ export default defineNuxtConfig({
     public: {
       enable: {
         storeLocator: process.env.ENABLE_STORE_LOCATOR === 'true' || false,
-        legal: process.env.ENABLE_LEGAL === 'true' || false
+        legal: process.env.ENABLE_LEGAL === 'true' || false,
+        socials: process.env.ENABLE_SOCIALS === 'true' || false,
       },
       version: pkg.version,
     },

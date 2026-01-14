@@ -23,6 +23,7 @@
     "notivue": "^2.4.5",
     "nuxt": "^4.2.1",
     "nuxt-graphql-request": "^8.1.1",
+    "nuxt-gtag": "4.1.0",
     "swiper": "^12.0.3",
     "vue": "latest"
   },

@@ -5,9 +5,13 @@ const appConfig = useAppConfig();
 
 <template>
   <div class="text-center md:text-left">
-    <span class="transition-all hover:text-black hover:dark:text-neutral-100">
+    <a
+        href="https://github.com/rikp777/nuxtcommerce"
+        target="_blank"
+        class="transition-all hover:text-black hover:dark:text-neutral-100 cursor-pointer"
+    >
       {{ appConfig.site.name }} v{{ config.public.version }}
-    </span>
+    </a>
     —
     {{ $t('footer.developed_by_author') }}
     <a class="transition-all hover:text-black hover:dark:text-neutral-100 underline decoration-dotted underline-offset-4"

@@ -147,8 +147,52 @@
       "still_questions": "Heb je nog vragen?",
       "contact_us": "Neem contact op"
     },
-    "terms": "Algemene Voorwaarden",
-    "cookies": "Cookiebeleid"
+    "legal": {
+      "title": "Juridisch",
+      "description": "Ons privacybeleid en onze algemene voorwaarden zijn van toepassing op al onze diensten.",
+      "cookies": {
+        "functional": "Noodzakelijk voor het winkelmandje en afrekenen.",
+        "analytical": "Anonieme statistieken om de website te verbeteren."
+      },
+      "gdpr": {
+        "access_title": "Inzage & Correctie",
+        "access_desc": "Je kunt je gegevens inzien en aanpassen via je account.",
+        "delete_title": "Recht op vergetelheid",
+        "delete_desc": "Je kunt een verzoek indienen om al je gegevens te laten verwijderen.",
+        "contact_title": "Vragen over data?",
+        "contact_desc": "Mail onze privacy officer"
+      },
+      "sections": [
+        {
+          "title": "Privacybeleid",
+          "desc": "Uw privacy is belangrijk voor ons. Het is ons beleid om uw privacy te respecteren met betrekking tot alle informatie die we van u kunnen verzamelen op onze website, .hey, en andere sites die we bezitten en beheren.\n\nWe vragen alleen om persoonlijke informatie wanneer we deze echt nodig hebben om u een dienst te kunnen leveren. We verzamelen het op eerlijke en rechtmatige wijze, met uw medeweten en toestemming. We laten u ook weten waarom we het verzamelen en hoe het zal worden gebruikt.\n\nWe bewaren verzamelde informatie alleen zo lang als nodig is om u de gevraagde dienst te leveren. De gegevens die we opslaan, beschermen we binnen commercieel aanvaardbare middelen om verlies en diefstal te voorkomen, evenals ongeoorloofde toegang, openbaarmaking, kopiëren, gebruik of wijziging.\n\nWe delen geen persoonlijk identificeerbare informatie in het openbaar of met derden, behalve wanneer dit wettelijk vereist is."
+        },
+        {
+          "title": "GDPR/AVG Naleving",
+          "desc": "Indien u een inwoner bent van de Europese Economische Ruimte (EER), heeft u bepaalde rechten op het gebied van gegevensbescherming. Indien u geïnformeerd wilt worden over welke persoonlijke informatie we van u hebben en indien u wilt dat deze uit onze systemen wordt verwijderd, neem dan contact met ons op.\n\nOnder bepaalde omstandigheden heeft u de volgende rechten op gegevensbescherming:\n• Het recht op inzage, bijwerking of verwijdering van de informatie die we over u hebben.\n• Het recht op rectificatie.\n• Het recht om bezwaar te maken.\n• Het recht op beperking.\n• Het recht op gegevensoverdraagbaarheid.\n• Het recht om toestemming in te trekken."
+        },
+        {
+          "title": "Algemene Voorwaarden",
+          "desc": "1. Voorwaarden\nDoor de website op .hey te bezoeken, gaat u akkoord met deze algemene voorwaarden, alle toepasselijke wet- en regelgeving, en stemt u ermee in dat u verantwoordelijk bent voor de naleving van alle toepasselijke lokale wetten. Als u niet akkoord gaat met een van deze voorwaarden, is het u verboden deze site te gebruiken of te bezoeken.\n\n2. Gebruikslicentie\nEr wordt toestemming verleend om tijdelijk één exemplaar van de materialen (informatie of software) op de website van .hey te downloaden voor persoonlijk, niet-commercieel tijdelijk bekijken. Dit is het verlenen van een licentie, geen eigendomsoverdracht, en onder deze licentie mag u niet:\n• de materialen wijzigen of kopiëren;\n• de materialen gebruiken voor commerciële doeleinden, of voor enige openbare vertoning (commercieel of niet-commercieel);\n• proberen software op de website van .hey te decompileren of te reverse-engineeren;\n• auteursrechtelijke of andere eigendomsvermeldingen van de materialen verwijderen; of\n• de materialen overdragen aan een andere persoon of de materialen \"spiegelen\" op een andere server.\n\nDeze licentie wordt automatisch beëindigd als u een van deze beperkingen overtreedt en kan op elk moment door .hey worden beëindigd. Bij beëindiging van uw bezichtiging van deze materialen of bij beëindiging van deze licentie, moet u alle gedownloade materialen in uw bezit vernietigen, ongeacht of deze in elektronisch of gedrukt formaat zijn."
+        },
+        {
+          "title": "Disclaimer",
+          "desc": "De materialen op de website van .hey worden geleverd op een 'as is' basis. .hey geeft geen garanties, expliciet of impliciet, en wijst hierbij alle andere garanties af, inclusief maar niet beperkt tot impliciete garanties of voorwaarden van verkoopbaarheid, geschiktheid voor een bepaald doel, of niet-inbreuk op intellectueel eigendom of andere schending van rechten.\n\nVerder geeft .hey geen garanties en doet geen uitspraken over de nauwkeurigheid, waarschijnlijke resultaten of betrouwbaarheid van het gebruik van de materialen op haar website of anderszins met betrekking tot dergelijke materialen of op sites die aan deze site zijn gekoppeld."
+        },
+        {
+          "title": "Beperkingen",
+          "desc": "In geen geval zal .hey of haar leveranciers aansprakelijk zijn voor enige schade (inclusief, zonder beperking, schade door verlies van gegevens of winst, of als gevolg van bedrijfsonderbreking) voortvloeiend uit het gebruik of het onvermogen om de materialen op de website van .hey te gebruiken, zelfs als .hey of een door .hey geautoriseerde vertegenwoordiger mondeling of schriftelijk op de hoogte is gesteld van de mogelijkheid van dergelijke schade. Omdat sommige rechtsgebieden geen beperkingen op impliciete garanties of beperkingen van aansprakelijkheid voor gevolgschade of incidentele schade toestaan, zijn deze beperkingen mogelijk niet op u van toepassing."
+        },
+        {
+          "title": "Toepasselijk recht",
+          "desc": "Deze algemene voorwaarden worden beheerst door en geïnterpreteerd in overeenstemming met de wetten van Nederland en u onderwerpt zich onherroepelijk aan de exclusieve jurisdictie van de rechtbanken in die staat of locatie."
+        },
+        {
+          "title": "Cookiebeleid",
+          "desc": "We gebruiken cookies om onze diensten te verbeteren, te promoten en te beschermen. Door de site te blijven gebruiken, gaat u akkoord met ons gebruik van cookies.\n\nWat zijn cookies?\nCookies zijn eenvoudige tekstbestanden die door de server van een website op uw computer of mobiele apparaat worden opgeslagen. Elke cookie is uniek voor uw webbrowser. Het bevat anonieme informatie zoals een unieke identificatiecode, de domeinnaam van de website en enkele cijfers en getallen.\n\nWelke soorten cookies gebruiken we?\n• Noodzakelijke cookies: stellen ons in staat u de best mogelijke ervaring te bieden bij het bezoeken en navigeren op onze website en het gebruik van de functies.\n• Analytische cookies: stellen ons in staat om geaggregeerde gegevens te verzamelen voor statistische doeleinden over hoe onze bezoekers de website gebruiken."
+        }
+      ]
+    }
   },
   "days": {
     "monday": "Maandag",
@@ -202,6 +246,13 @@
   },
   "socials": {
     "instagram": "Instagram",
-    "facebook": "Facebook"
+    "facebook": "Facebook",
+    "follow_us": "Volg ons"
+  },
+  "cookie": {
+    "preferences": "Cookie voorkeuren",
+    "description": "We gebruiken cookies om jouw ervaring te verbeteren en bezoekersverkeer te meten.",
+    "decline": "Niet nu",
+    "accept": "Prima"
   }
 }

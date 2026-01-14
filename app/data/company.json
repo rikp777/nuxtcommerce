@@ -1,5 +1,5 @@
 {
-  "legalName": "BBX B.V.",
+  "legalName": "Extreme bikes B.V.",
   "address": {
     "street": "Donk 43",
     "city": "Meijel",
@@ -9,22 +9,18 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Donk+43,+5768XM+Meijel"
   },
   "contact": {
-    "email": "info@bbxtreme.nl",
-    "phone": "077 2340 456"
+    "email": "info@dothey.nl",
+    "phone": "+31 6 5366 4416"
   },
   "registration": {
-    "kvk": "94990387",
+    "kvk": "",
     "btw": "",
-    "founded": "2024"
+    "founded": "2025"
   },
   "socials": {
-    "facebook": "https://facebook.com/bbxtreme",
-    "instagram": "https://instagram.com/bbxtreme",
-    "x": "https://x.com/bbxtreme"
-  },
-  "openingHours": [
-    { "day": "Maandag - Vrijdag", "hours": "09:00 - 17:00" },
-    { "day": "Zaterdag", "hours": "10:00 - 15:00" },
-    { "day": "Zondag", "hours": "Gesloten" }
-  ]
+    "facebook": "",
+    "instagram": "",
+    "x": "",
+    "linkedin": "https://www.linkedin.com/company/dothey/"
+  }
 }

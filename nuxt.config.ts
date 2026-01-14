@@ -4,7 +4,7 @@ import pkg from './package.json';
 export default defineNuxtConfig({
   devtools: { enabled: false },
 
-  modules: ['nuxt-graphql-request', '@vueuse/nuxt', '@nuxt/ui', '@nuxt/image', 'notivue/nuxt', '@nuxthub/core', '@nuxtjs/i18n'],
+  modules: ['nuxt-graphql-request', '@vueuse/nuxt', '@nuxt/ui', '@nuxt/image', 'notivue/nuxt', '@nuxthub/core', '@nuxtjs/i18n', 'nuxt-gtag'],
 
   i18n: {
     defaultLocale: 'en',
@@ -38,7 +38,11 @@ export default defineNuxtConfig({
   runtimeConfig: {
     gqlHost: process.env.GQL_HOST || '',
     public: {
-      enableStoreLocator: true,
+      enable: {
+        storeLocator: process.env.ENABLE_STORE_LOCATOR === 'true' || false,
+        legal: process.env.ENABLE_LEGAL === 'true' || false,
+        socials: process.env.ENABLE_SOCIALS === 'true' || false,
+      },
       version: pkg.version,
     },
   },
@@ -51,6 +55,10 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: { routes: ['/sitemap.xml', '/robots.txt'] },
+  },
+
+  gtag: {
+    id: process.env.GTAG || 'G-XXXXXXXXXX'
   },
 
   compatibilityDate: '2024-08-03',

@@ -2,7 +2,7 @@
 import storesData from '~/data/stores.json';
 const config = useRuntimeConfig();
 
-if (!config.public.enableStoreLocator) {
+if (!config.public.enable.storeLocator) {
   throw createError({ statusCode: 404, statusMessage: 'Page Not Found' });
 }
 

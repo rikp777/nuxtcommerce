@@ -5,26 +5,32 @@ import SubscribeBox from "~/components/SubscribeBox.vue";
 
 const { t } = useI18n();
 const localePath = useLocalePath();
+const config = useRuntimeConfig();
 
-const footerLinks = computed(() => [
-  {
-    title: t('company.title'),
-    links: [
-      { label: t('stores.find_store'), to: '/stores' },
-      { label: t('company.about.title'), to: '/about' },
-    ]
-  },
-  {
-    title: t('company.support'),
-    links: [
-      { label: t('product.shipping_returns'), to: '/shipping' },
-      { label: t('store.faq.title'), to: '/faq' },
-      { label: t('company.contact'), to: '/contact' },
-      { label: t('store.terms') || 'Terms & Conditions', to: '/terms' },
-      { label: t('store.cookies') || 'Cookie Policy', to: '/cookies' }
-    ]
-  }
-]);
+const footerLinks = computed(() => {
+  const companyLinks = [
+    ...(config.public.enable.storeLocator ? [{ label: t('stores.find_store'), to: '/stores' }] : []),
+    { label: t('company.about.title'), to: '/about' },
+  ];
+
+  const supportLinks = [
+    { label: t('product.shipping_returns'), to: '/shipping' },
+    { label: t('store.faq.title'), to: '/faq' },
+    { label: t('company.contact'), to: '/contact' },
+    ...(config.public.enable.legal ? [{ label: t('store.legal.title'), to: '/legal' }] : []),
+  ];
+
+  return [
+    {
+      title: t('company.title'),
+      links: companyLinks
+    },
+    {
+      title: t('company.support'),
+      links: supportLinks
+    }
+  ];
+});
 </script>
 
 <template>

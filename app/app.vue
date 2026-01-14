@@ -32,6 +32,7 @@ useSeoMeta({
   <Notivue v-slot="item">
     <Notification :item="item" :theme="materialTheme" />
   </Notivue>
+  <CookieBanner />
 </template>
 
 <style lang="postcss">

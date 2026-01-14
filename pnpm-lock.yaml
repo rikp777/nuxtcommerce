@@ -32,6 +32,9 @@ importers:
       nuxt-graphql-request:
         specifier: ^8.1.1
         version: 8.1.1(graphql@16.10.0)(magicast@0.5.1)(rollup@4.53.3)
+      nuxt-gtag:
+        specifier: 4.1.0
+        version: 4.1.0(magicast@0.5.1)
       swiper:
         specifier: ^12.0.3
         version: 12.0.3
@@ -3939,6 +3942,9 @@ packages:
     resolution: {integrity: sha512-9tXc9Is+YRDwh8C+MG+/idqV0DuNBHO9DzkqG4YWeW1Hdj7Q9oHQeY470uTrmFVpfVj6O9/i0vmIiXQF2WYGOQ==}
     peerDependencies:
       graphql: 14.x || 15.x || 16.x
+
+  nuxt-gtag@4.1.0:
+    resolution: {integrity: sha512-2TL7RUA8N8NYGbY4UZ9IqKyMZMgO9cCGu6yqadUU8RF+Y81PXI+k+1giIA11XXStaJoGXaXeNsBUIJXn1tUy3A==}
 
   nuxt@4.2.1:
     resolution: {integrity: sha512-OE5ONizgwkKhjTGlUYB3ksE+2q2/I30QIYFl3N1yYz1r2rwhunGA3puUvqkzXwgLQ3AdsNcigPDmyQsqjbSdoQ==}
@@ -9631,6 +9637,15 @@ snapshots:
       - magicast
       - rollup
       - supports-color
+
+  nuxt-gtag@4.1.0(magicast@0.5.1):
+    dependencies:
+      '@nuxt/kit': 4.2.1(magicast@0.5.1)
+      defu: 6.1.4
+      pathe: 2.0.3
+      ufo: 1.6.1
+    transitivePeerDependencies:
+      - magicast
 
   nuxt@4.2.1(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.1)(@types/node@24.3.0)(@vue/compiler-sfc@3.5.25)(cac@6.7.14)(db0@0.3.4)(eslint@9.35.0(jiti@2.6.1))(ioredis@5.8.2)(lightningcss@1.30.1)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.53.3)(terser@5.44.1)(typescript@5.9.3)(vite@7.2.7(@types/node@24.3.0)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.44.1)(yaml@2.8.2))(yaml@2.8.2):
     dependencies:

@@ -1,6 +1,6 @@
 <p align="center">
   <a href="#" target="_blank" rel="noopener">
-    <img alt="NuxtCommerce – Headless storefront for WooCommerce" src="https://github.com/user-attachments/assets/1c6720b7-5aea-4f6b-be55-8944fb81799a">
+    <img width="2556" height="702" alt="NuxtCommerce – Headless storefront for WooCommerce" src="https://github.com/user-attachments/assets/e9db424e-a8fc-4820-a0be-5e81cf0f3a30" />
   </a>
 </p>
 

@@ -1,10 +1,20 @@
 <script setup lang="ts">
 import PageHero from "~/components/PageHero.vue";
+import crewData from "~/data/crew.json";
 
 const { t } = useI18n();
 const localePath = useLocalePath();
 const appConfig = useAppConfig();
 const siteName = appConfig.site.name;
+
+type CrewMember = {
+  id: number;
+  name: string;
+  role: string;
+  image: string;
+};
+
+const teamMembers = crewData as CrewMember[];
 
 useSeoMeta({
   title: t('nav.about'),
@@ -28,12 +38,6 @@ const values = computed(() => [
     text: t('company.about.values.safety.desc')
   }
 ]);
-
-const teamMembers = [
-  { name: 'Rik Peeters', role: 'Software Engineer', image: '/images/team-1.jpg' },
-  { name: 'Sefa Bulak', role: 'Head of Design', image: '/images/team-2.jpg' },
-  { name: 'Team Member', role: 'Adventure Specialist', image: '/images/team-3.jpg' },
-];
 </script>
 
 <template>
@@ -71,13 +75,13 @@ const teamMembers = [
           <div class="bg-neutral-100 dark:bg-white/5 rounded-[32px] p-8 lg:p-10">
             <h3 class="text-xl font-bold mb-6 text-black dark:text-white">{{ $t('company.about.team.title') }}</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              <div v-for="(member, idx) in teamMembers" :key="idx" class="group">
+
+              <div v-for="member in teamMembers" :key="member.id" class="group">
                 <div class="aspect-square rounded-2xl overflow-hidden bg-gray-200 dark:bg-neutral-800 mb-4 relative">
-                  <div class="absolute inset-0 flex items-center justify-center text-neutral-400">
-                    <UIcon name="i-iconamoon-profile-circle-fill" size="64" />
-                  </div>
                   <NuxtImg
                       :src="member.image"
+                      :alt="member.name"
+                      loading="lazy"
                       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-0"
                       @load="$event.target.classList.remove('opacity-0')"
                   />
@@ -85,6 +89,7 @@ const teamMembers = [
                 <h4 class="font-bold text-lg text-black dark:text-white">{{ member.name }}</h4>
                 <p class="text-sm text-alizarin-crimson-600 dark:text-alizarin-crimson-400 font-medium">{{ member.role }}</p>
               </div>
+
             </div>
           </div>
 
@@ -118,9 +123,9 @@ const teamMembers = [
               </p>
               <NuxtLink
                   :to="localePath('/contact')"
-                  class="inline-flex items-center gap-2 font-bold bg-white text-black dark:bg-black dark:text-white px-6 py-3 rounded-xl hover:opacity-90 transition-opacity"
+                  class="inline-flex items-center gap-2 font-bold bg-white text-black dark:bg-black dark:text-white px-6 py-3 rounded-xl hover:opacity-90 transition-opacity mb-10"
               >
-                {{ t('nav.contact') }}
+                {{ t('company.contact') }}
                 <UIcon name="i-iconamoon-arrow-right-2" />
               </NuxtLink>
             </div>

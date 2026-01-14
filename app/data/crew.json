@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Rik Peeters",
+    "role": "Software Engineer",
+    "image": "https://avatars.githubusercontent.com/u/33726176?v=4"
+  },
+  {
+    "id": 2,
+    "name": "Sefa Bulak",
+    "role": "Head of Design",
+    "image": "https://avatars.githubusercontent.com/u/79358543?v=4"
+  },
+  {
+    "id": 3,
+    "name": "Join Us?",
+    "role": "Contributors",
+    "image": "https://avatars.githubusercontent.com/u/101566673?v=4"
+  }
+]

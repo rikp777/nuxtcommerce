@@ -214,30 +214,30 @@
       "tagline": "Meer dan alleen e-bikes – wij creëren ervaringen.",
       "passion": {
         "title": "Onze Passie",
-        "desc_1": "Bij {name} bouwen we niet zomaar elektrische offroad bikes; we creëren ervaringen. We zijn een klein maar hecht team met een enorme passie voor avontuur, natuur en verhalen.",
-        "desc_2": "Elk product dat we ontwerpen en elke reis die we plannen komt recht uit het hart. We willen dat zowel kinderen als volwassenen loskomen van schermen en weer verbinding maken met de modder, de snelheid en de buitenlucht."
+        "desc_1": "Bij {name} bouwen we niet zomaar elektrische offroad bikes; we creëren ervaringen. We zijn een klein, hecht team met een enorme passie voor avontuur, natuur en sterke verhalen.",
+        "desc_2": "Elk product dat we ontwerpen en elke trip die we plannen komt recht uit het hart. We willen dat zowel kinderen als volwassenen loskomen van hun schermen en weer in contact komen met de modder, de snelheid en de buitenlucht."
       },
       "team": {
         "title": "Ontmoet de Crew"
       },
       "values": {
-        "title": "Onze Werkwijze",
+        "title": "Hoe wij werken",
         "teamwork": {
-          "title": "Teamwerk",
-          "desc": "Wij geloven in de kracht van samenwerking. Onze beste ideeën ontstaan door te brainstormen in de natuur en nauw samen te werken met lokale gidsen en makers."
+          "title": "Samenwerking",
+          "desc": "Wij geloven in de kracht van samenwerken. Onze beste ideeën ontstaan door te brainstormen in de natuur en nauw samen te werken met lokale gidsen en creators."
         },
         "innovation": {
           "title": "Innovatie",
-          "desc": "We combineren jarenlange ervaring met frisse ideeën. Het maken van elektrische offroad bikes vereist precisie en vooruitstrevend design."
+          "desc": "We combineren jarenlange ervaring met frisse ideeën. Het creëren van elektrische offroad bikes vereist precisie en een vooruitstrevend ontwerp."
         },
         "safety": {
           "title": "Veiligheid",
-          "desc": "Veiligheid staat voorop bij elk avontuur. Van de bouwkwaliteit van onze fietsen tot de planning van ervaringen; we doen geen concessies."
+          "desc": "Veiligheid staat voorop bij elk avontuur. Van de bouwkwaliteit van onze bikes tot de planning van ervaringen; wij sluiten geen compromissen."
         }
       },
       "cta": {
-        "title": "Ga het avontuur aan",
-        "desc": "Heb je vragen over onze fietsen of wil je samenwerken?"
+        "title": "Ga mee op avontuur",
+        "desc": "Heb je vragen over onze bikes of wil je samenwerken?"
       }
     },
     "careers": "Vacatures",

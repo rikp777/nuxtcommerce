@@ -210,21 +210,21 @@
     "phone": "Telefon",
     "about": {
       "title": "Über {name}",
-      "subtitle": "Wir sind ein Team von Abenteurern, Kreativen und Outdoor-Enthusiasten mit einer gemeinsamen Mission: Menschen dem Abenteuer näher zu bringen.",
+      "subtitle": "Wir sind ein Team aus Abenteurern, Kreativen und Outdoor-Enthusiasten mit einer gemeinsamen Mission: Menschen dem Abenteuer näher zu bringen.",
       "tagline": "Mehr als nur E-Bikes – wir schaffen Erlebnisse.",
       "passion": {
         "title": "Unsere Leidenschaft",
-        "desc_1": "Bei {name} bauen wir nicht nur elektrische Offroad-Bikes; wir schaffen Erlebnisse. Wir sind ein kleines, aber eng verbundenes Team mit einer großen Leidenschaft für Abenteuer, Natur und Geschichten.",
-        "desc_2": "Jedes Produkt, das wir entwerfen, und jeder Trip, den wir planen, kommt von Herzen. Wir möchten, dass Kinder und Erwachsene gleichermaßen von Bildschirmen abschalten und wieder Verbindung zu Schlamm, Geschwindigkeit und der Natur aufnehmen."
+        "desc_1": "Bei {name} bauen wir nicht einfach nur elektrische Offroad-Bikes, wir schaffen Erlebnisse. Wir sind ein kleines, eingespieltes Team mit einer riesigen Leidenschaft für Abenteuer, Natur und Storytelling.",
+        "desc_2": "Jedes Produkt, das wir entwerfen, und jeder Trip, den wir planen, kommt von Herzen. Wir wollen, dass Kinder und Erwachsene gleichermaßen von den Bildschirmen wegkommen und wieder Kontakt zu Schlamm, Geschwindigkeit und der Natur finden."
       },
       "team": {
         "title": "Das Team"
       },
       "values": {
-        "title": "Wie wir arbeiten",
+        "title": "Unsere Arbeitsweise",
         "teamwork": {
-          "title": "Teamarbeit",
-          "desc": "Wir glauben an die Kraft der Zusammenarbeit. Unsere besten Ideen entstehen beim Brainstorming in der Natur und in enger Zusammenarbeit mit lokalen Guides und Kreativen."
+          "title": "Teamwork",
+          "desc": "Wir glauben an die Kraft der Zusammenarbeit. Unsere besten Ideen entstehen beim Brainstorming in der Natur und in enger Zusammenarbeit mit lokalen Guides."
         },
         "innovation": {
           "title": "Innovation",
@@ -236,8 +236,8 @@
         }
       },
       "cta": {
-        "title": "Starten Sie ins Abenteuer",
-        "desc": "Haben Sie Fragen zu unseren Bikes oder möchten Sie zusammenarbeiten?"
+        "title": "Komm mit ins Abenteuer",
+        "desc": "Hast du Fragen zu unseren Bikes oder möchtest du zusammenarbeiten?"
       }
     },
     "careers": "Karriere",

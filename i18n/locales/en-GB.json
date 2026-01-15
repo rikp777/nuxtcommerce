@@ -337,6 +337,129 @@
         "button": "Back to login"
       },
       "error": "Something went wrong. Please check your email address."
+    },
+    "addresses": {
+      "title": "Addresses",
+      "billing_title": "Billing Address",
+      "shipping_title": "Shipping Address",
+      "edit": "Edit",
+      "empty_billing": "No billing address set yet.",
+      "empty_shipping": "No shipping address set yet.",
+      "save": "Save",
+      "cancel": "Cancel",
+      "form": {
+        "company": "Company Name (Optional)",
+        "company_placeholder": "Company Inc.",
+        "first_name": "First Name",
+        "last_name": "Last Name",
+        "address": "Street + House number",
+        "postcode": "Postcode",
+        "city": "City",
+        "phone": "Phone number",
+        "email": "Email"
+      },
+      "notifications": {
+        "success": "Address saved successfully.",
+        "error": "Saving failed. Please check your input."
+      }
+    },
+    "details": {
+      "profile_title": "Public Profile",
+      "profile_subtitle": "This is the information we use for communication and on your invoices.",
+      "member_since": "Member since {year}",
+      "security_title": "Security",
+      "security_subtitle": "Change your password to keep your account safe.",
+      "delete_account": "Delete account",
+      "delete_warning": "If you delete your account, all your data will be erased. This cannot be undone.",
+      "form": {
+        "first_name": "First Name",
+        "last_name": "Last Name",
+        "email": "Email Address",
+        "current_password": "Current password",
+        "new_password": "New password",
+        "confirm_password": "Confirm new password",
+        "save_button": "Save changes",
+        "password_button": "Update password"
+      },
+      "notifications": {
+        "profile_success": "Profile details updated successfully.",
+        "profile_error": "Saving failed. Please check your input.",
+        "password_mismatch": "New passwords do not match.",
+        "password_success": "Password changed!",
+        "password_error": "Could not change password."
+      }
+    },
+    "orders": {
+      "title": "My Orders",
+      "empty": "You haven't placed any orders yet.",
+      "go_shopping": "Go shopping",
+      "items_label": "Items",
+      "view_details": "View full details",
+      "unknown_product": "Unknown product",
+      "status": {
+        "COMPLETED": "Completed",
+        "PROCESSING": "Processing",
+        "ON_HOLD": "On hold",
+        "PENDING": "Pending payment",
+        "CANCELLED": "Cancelled",
+        "REFUNDED": "Refunded",
+        "FAILED": "Failed"
+      },
+      "details": {
+        "back": "Back to overview",
+        "not_found": "Order not found",
+        "error_message": "An error occurred while fetching the order details. The ID might be incorrect or you may lack permissions.",
+        "total_amount": "Total Amount",
+        "billing_address": "Billing Address",
+        "shipping_address": "Shipping Address",
+        "no_shipping": "No shipping address available",
+        "items": "Items",
+        "product_unavailable": "Product no longer available",
+        "quantity": "Quantity",
+        "subtotal": "Subtotal",
+        "shipping": "Shipping",
+        "tax": "Tax",
+        "total": "Total",
+        "paid_with": "Paid with {method}"
+      }
+    },
+    "dashboard": {
+      "greetings": {
+        "night": "Good night",
+        "morning": "Good morning",
+        "afternoon": "Good afternoon",
+        "evening": "Good evening"
+      },
+      "logged_in_as": "Logged in as {email}",
+      "customer_number": "Customer number",
+      "open_orders": "Open Orders",
+      "view_orders": "View orders",
+      "recent_activity": "Recent Activity",
+      "see_all": "See all",
+      "last_order_info": "Your last order contains {count} items.",
+      "no_orders": "No orders placed yet.",
+      "go_shopping": "Go shopping",
+      "quick_links": {
+        "title": "Quick links",
+        "addresses": "Manage Addresses",
+        "addresses_desc": "Edit billing or shipping address",
+        "details": "My Details",
+        "details_desc": "Update name or email",
+        "support": "Customer Support",
+        "support_desc": "Need help? Email us.",
+        "logout": "Logout",
+        "logout_desc": "See you next time"
+      }
+    },
+    "account": {
+      "logout": "Logout",
+      "logout_success": "You have been logged out.",
+      "tabs": {
+        "dashboard": "Overview",
+        "orders": "Orders",
+        "addresses": "Addresses",
+        "details": "Account details"
+      }
     }
   }
 }

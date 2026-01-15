@@ -2,6 +2,7 @@
 const router = useRouter();
 const route = useRoute();
 const { t } = useI18n();
+const localePath = useLocalePath();
 
 const { data: user, status, error } = await useFetch('/api/auth/user', {
   key: 'user-profile',
@@ -11,7 +12,6 @@ const { data: rawOrders } = await useFetch('/api/auth/orders', { key: 'user-orde
 const { data: addresses, refresh: refreshAddresses } = await useFetch('/api/auth/addresses', { key: 'user-addresses' });
 
 const initOrderId = route.query.orderId as string | undefined;
-
 const selectedOrderId = ref<string | null>(initOrderId || null);
 const activeTab = ref(initOrderId ? 'orders' : 'dashboard');
 
@@ -38,8 +38,8 @@ function closeOrder() {
 
 async function handleLogout() {
   await $fetch('/api/auth/logout', { method: 'POST' });
-  push.success('Je bent uitgelogd.');
-  window.location.href = '/';
+  push.success(t('account.logout_success'));
+  window.location.href = localePath('/');
 }
 
 watch(activeTab, (newTab) => {
@@ -59,16 +59,16 @@ watch(() => route.query.orderId, (newId) => {
 
 watchEffect(() => {
   if (error.value || (!user.value && status.value === 'success')) {
-    router.push('/account/login');
+    router.push(localePath('/account/login'));
   }
 });
 
-const tabs = [
-  { id: 'dashboard', label: 'Overzicht', icon: 'i-iconamoon-home' },
-  { id: 'orders', label: 'Bestellingen', icon: 'i-iconamoon-delivery' },
-  { id: 'addresses', label: 'Adressen', icon: 'i-iconamoon-location' },
-  { id: 'details', label: 'Accountgegevens', icon: 'i-iconamoon-profile' },
-];
+const tabs = computed(() => [
+  { id: 'dashboard', label: t('auth.account.tabs.dashboard'), icon: 'i-iconamoon-home' },
+  { id: 'orders', label: t('auth.account.tabs.orders'), icon: 'i-iconamoon-delivery' },
+  { id: 'addresses', label: t('auth.account.tabs.addresses'), icon: 'i-iconamoon-location' },
+  { id: 'details', label: t('auth.account.tabs.details'), icon: 'i-iconamoon-profile' },
+]);
 </script>
 
 <template>
@@ -105,7 +105,7 @@ const tabs = [
               <hr class="border-gray-100 dark:border-neutral-800 my-4" />
               <button @click="handleLogout" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors font-medium text-sm text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10">
                 <UIcon name="i-iconamoon-exit" size="20" />
-                Uitloggen
+                {{ t('auth.account.logout') }}
               </button>
             </nav>
           </div>

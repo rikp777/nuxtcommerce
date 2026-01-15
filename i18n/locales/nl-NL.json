@@ -282,5 +282,184 @@
     "description": "We gebruiken cookies om jouw ervaring te verbeteren en bezoekersverkeer te meten.",
     "decline": "Niet nu",
     "accept": "Prima"
+  },
+  "auth": {
+    "login": {
+      "title": "Inloggen",
+      "subtitle": "Vul je gegevens in om verder te gaan.",
+      "side_title": "Welkom terug!",
+      "side_subtitle": "Log in om je bestellingen te bekijken en je gegevens te beheren",
+      "form": {
+        "user": "Gebruikersnaam of E-mail",
+        "user_placeholder": "Je gebruikersnaam of e-mailadres",
+        "password": "Wachtwoord",
+        "password_placeholder": "Je wachtwoord"
+      },
+      "forgot_password": "Wachtwoord vergeten?",
+      "button": "Inloggen",
+      "register": "Nog geen account?",
+      "register_link": "Registreer hier"
+    },
+    "register": {
+      "title": "Registreren",
+      "subtitle": "Vul je gegevens in om een account aan te maken.",
+      "side_title": "Account aanmaken!",
+      "side_subtitle": "Registreer je om te beginnen met winkelen",
+      "form": {
+        "first_name": "Voornaam",
+        "first_name_placeholder": "Je voornaam",
+        "last_name": "Achternaam",
+        "last_name_placeholder": "Je achternaam",
+        "email": "E-mailadres",
+        "email_placeholder": "Je e-mailadres",
+        "password": "Wachtwoord",
+        "password_placeholder": "Minimaal 8 tekens"
+      },
+      "button": "Registreren",
+      "login": "Heb je al een account?",
+      "login_link": "Hier inloggen"
+    },
+    "forgot_password": {
+      "title": "Wachtwoord vergeten?",
+      "subtitle": "Vul je e-mailadres in om een reset-link te ontvangen.",
+      "side_title": "Geen zorgen.",
+      "side_subtitle": "Het gebeurt de besten. Vul je e-mailadres in en we sturen je een link om weer toegang te krijgen.",
+      "form": {
+        "email": "E-mailadres",
+        "email_placeholder": "je e-mailadres"
+      },
+      "button": "Stuur reset link",
+      "footer_label": "Toch weer herinnerd?",
+      "footer_link": "Log in",
+      "success": {
+        "title": "Check je mail!",
+        "description": "Als er een account bestaat voor {email}, hebben we een link gestuurd om je wachtwoord te herstellen.",
+        "button": "Terug naar inloggen"
+      },
+      "error": "Er ging iets mis. Controleer je e-mailadres."
+    },
+    "addresses": {
+      "title": "Adressen",
+      "billing_title": "Factuuradres",
+      "shipping_title": "Verzendadres",
+      "edit": "Bewerken",
+      "empty_billing": "Nog geen factuuradres ingesteld.",
+      "empty_shipping": "Nog geen verzendadres ingesteld.",
+      "save": "Opslaan",
+      "cancel": "Annuleren",
+      "form": {
+        "company": "Bedrijfsnaam (Optioneel)",
+        "company_placeholder": "Bedrijf B.V.",
+        "first_name": "Voornaam",
+        "last_name": "Achternaam",
+        "address": "Straat + Huisnummer",
+        "postcode": "Postcode",
+        "city": "Stad",
+        "phone": "Telefoonnummer",
+        "email": "E-mail"
+      },
+      "notifications": {
+        "success": "Adres succesvol opgeslagen.",
+        "error": "Opslaan mislukt. Controleer je invoer."
+      }
+    },
+    "details": {
+      "profile_title": "Publiek Profiel",
+      "profile_subtitle": "Dit zijn de gegevens die we gebruiken voor communicatie en op je facturen.",
+      "member_since": "Lid sinds {year}",
+      "security_title": "Beveiliging",
+      "security_subtitle": "Wijzig je wachtwoord om je account veilig te houden.",
+      "delete_account": "Account verwijderen",
+      "delete_warning": "Als je je account verwijdert, worden al je gegevens gewist. Dit kan niet ongedaan worden gemaakt.",
+      "form": {
+        "first_name": "Voornaam",
+        "last_name": "Achternaam",
+        "email": "E-mailadres",
+        "current_password": "Huidig wachtwoord",
+        "new_password": "Nieuw wachtwoord",
+        "confirm_password": "Bevestig nieuw wachtwoord",
+        "save_button": "Wijzigingen opslaan",
+        "password_button": "Wachtwoord bijwerken"
+      },
+      "notifications": {
+        "profile_success": "Profielgegevens succesvol bijgewerkt.",
+        "profile_error": "Opslaan mislukt. Controleer je invoer.",
+        "password_mismatch": "Nieuwe wachtwoorden komen niet overeen.",
+        "password_success": "Wachtwoord gewijzigd!",
+        "password_error": "Kon wachtwoord niet wijzigen."
+      }
+    },
+    "orders": {
+      "title": "Mijn Bestellingen",
+      "empty": "Je hebt nog geen bestellingen geplaatst.",
+      "go_shopping": "Ga winkelen",
+      "items_label": "Artikelen",
+      "view_details": "Bekijk volledige details",
+      "unknown_product": "Onbekend product",
+      "status": {
+        "COMPLETED": "Voltooid",
+        "PROCESSING": "In behandeling",
+        "ON_HOLD": "In de wacht",
+        "PENDING": "Wachtend op betaling",
+        "CANCELLED": "Geannuleerd",
+        "REFUNDED": "Terugbetaald",
+        "FAILED": "Mislukt"
+      },
+      "details": {
+        "back": "Terug naar overzicht",
+        "not_found": "Order niet gevonden",
+        "error_message": "Er is een fout opgetreden bij het ophalen van de order details. Mogelijk is de ID onjuist of heb je geen rechten.",
+        "total_amount": "Totaalbedrag",
+        "billing_address": "Factuuradres",
+        "shipping_address": "Verzendadres",
+        "no_shipping": "Geen verzendadres beschikbaar",
+        "items": "Artikelen",
+        "product_unavailable": "Product niet meer beschikbaar",
+        "quantity": "Aantal",
+        "subtotal": "Subtotaal",
+        "shipping": "Verzending",
+        "tax": "BTW",
+        "total": "Totaal",
+        "paid_with": "Betaald met {method}"
+      }
+    },
+    "dashboard": {
+      "greetings": {
+        "night": "Goedenacht",
+        "morning": "Goedemorgen",
+        "afternoon": "Goedemiddig",
+        "evening": "Goedenavond"
+      },
+      "logged_in_as": "Ingelogd als {email}",
+      "customer_number": "Klantnummer",
+      "open_orders": "Openstaande Bestellingen",
+      "view_orders": "Bekijk bestellingen",
+      "recent_activity": "Recente Activiteit",
+      "see_all": "Alles zien",
+      "last_order_info": "Je laatste bestelling bevat {count} artikelen.",
+      "no_orders": "Nog geen bestellingen geplaatst.",
+      "go_shopping": "Ga winkelen",
+      "quick_links": {
+        "title": "Snel naar",
+        "addresses": "Adressen beheren",
+        "addresses_desc": "Wijzig factuur- of verzendadres",
+        "details": "Mijn Gegevens",
+        "details_desc": "Update naam of e-mail",
+        "support": "Klantenservice",
+        "support_desc": "Hulp nodig? Mail ons.",
+        "logout": "Uitloggen",
+        "logout_desc": "Tot de volgende keer"
+      }
+    },
+    "account": {
+      "logout": "Uitloggen",
+      "logout_success": "Je bent uitgelogd.",
+      "tabs": {
+        "dashboard": "Overzicht",
+        "orders": "Bestellingen",
+        "addresses": "Adressen",
+        "details": "Accountgegevens"
+      }
+    }
   }
 }

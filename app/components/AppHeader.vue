@@ -4,6 +4,11 @@ const route = useRoute();
 const localePath = useLocalePath();
 const { cart } = useCart();
 
+const { data: user } = await useFetch('/api/auth/user', {
+  key: 'user-profile',
+  retry: 0
+});
+
 const searchQuery = ref((route.query.q || '').toString());
 const searchResults = ref([]);
 const isLoading = ref(false);
@@ -125,6 +130,18 @@ onClickOutside(cartContainer, () => (cartModal.value = false));
           </div>
         </div>
       </div>
+
+      <NuxtLink
+          :to="localePath(user ? '/account' : '/account/login')"
+          class="flex min-h-12 min-w-12 items-center justify-center rounded-full hover:bg-black/5 hover:dark:bg-white/15 transition-colors"
+          :aria-label="user ? 'My Account' : 'Login'"
+      >
+        <div v-if="user" class="h-8 w-8 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center font-bold text-xs ring-2 ring-white dark:ring-black">
+          {{ user.firstName?.[0] }}{{ user.lastName?.[0] }}
+        </div>
+
+        <UIcon v-else name="i-iconamoon-profile-circle-fill" size="26" class="text-[#5f5f5f] dark:text-[#b7b7b7]" />
+      </NuxtLink>
 
       <button
           @mouseup="cartModal = !cartModal"

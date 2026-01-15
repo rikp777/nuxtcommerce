@@ -97,7 +97,7 @@ const selectStore = (store) => {
       </div>
     </div>
 
-    <div class="w-full lg:w-2/3 h-[45%] lg:h-full relative p-3">
+    <div class="w-full lg:w-2/3 h-[45%] lg:h-full relative p-4">
 
       <div class="w-full h-full rounded-2xl overflow-hidden shadow-md border border-gray-200 dark:border-neutral-700 relative">
         <ClientOnly>

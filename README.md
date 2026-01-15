@@ -22,7 +22,8 @@
 ## ⚠️ About this Fork
 
 This is a **Hard Fork** of the original NuxtCommerce.
-**Goal:** Active maintenance and refactoring the codebase towards **Functional Programming (FP)**, **SOLID** principles, and **DRY** architecture.
+**Goal:** Active maintenance and refactoring the codebase towards **Functional Programming (FP)**, **SOLID** principles,
+and **DRY** architecture.
 
 Pull Requests are reviewed and merged actively.
 
@@ -43,6 +44,7 @@ Pull Requests are reviewed and merged actively.
 
 * 🎯 **Headless WooCommerce** store powered by **WPGraphQL** (+ WooGraphQL)
 * ⚡️ **Nuxt 4 + Nitro** with server-side GraphQL proxy, **SWR** caching & route rules
+* 👤 **User Dashboard** with Login/Register, Order History, Status Tracking & Address Management
 * 🧭 **Pinterest-style product grid** with **infinite scroll**
 * 🛒 **Cart & Checkout** (WooCommerce session cookie handled server-side)
 * ❤️ **Wishlist** (localStorage) & **Favorites** page
@@ -64,7 +66,8 @@ Pull Requests are reviewed and merged actively.
 * **Deployment (optional):** NuxtHub + Cloudflare Workers
 
 > Project scripts live in `package.json` (`dev`, `dev:ssl`, `build`, `generate`, `preview`, `deploy`).
-> 
+>
+
 ## Quickstart
 
 ### Requirements
@@ -118,7 +121,8 @@ Key settings are in **`nuxt.config.ts`**:
 
 ## WordPress + WooCommerce + WPGraphQL Setup
 
-> This project uses **WordPress + WooCommerce** as the headless backend and **WPGraphQL** (+ WooGraphQL) as the API layer consumed by the Nuxt app. Follow the steps below carefully.
+> This project uses **WordPress + WooCommerce** as the headless backend and **WPGraphQL** (+ WooGraphQL) as the API
+> layer consumed by the Nuxt app. Follow the steps below carefully.
 
 ### 1) Fresh WordPress install (quick checklist)
 
@@ -126,8 +130,8 @@ Key settings are in **`nuxt.config.ts`**:
 2. Log in to `/wp-admin`.
 3. Go to **Settings → General** and set:
 
-   * Site Language, Timezone, Date/Time format
-   * Ensure **WordPress Address** and **Site Address** use **https\://** in production
+    * Site Language, Timezone, Date/Time format
+    * Ensure **WordPress Address** and **Site Address** use **https\://** in production
 4. Go to **Settings → Permalinks** and choose **Post name**.
 
    > Pretty permalinks are required for `/graphql`.
@@ -139,6 +143,11 @@ Install and activate:
 * [**WooCommerce**](https://woocommerce.com/) – core e-commerce
 * [**WPGraphQL**](https://www.wpgraphql.com/) – GraphQL API for WordPress
 * [**WPGraphQL WooCommerce (WooGraphQL)**](https://woographql.com/) – WooCommerce schema for WPGraphQL
+* [**WPGraphQL JWT Authentication**](https://github.com/wp-graphql/wp-graphql-jwt-authentication) – Required for user
+  login/registration.
+    * ⚠️ **Important**: Download the `.zip` file from
+      the [GitHub Releases page](https://github.com/wp-graphql/wp-graphql-jwt-authentication/releases) and upload it
+      manually via **Plugins → Add New → Upload Plugin**.
 * *(Optional)* Regenerate Thumbnails – rebuild image sizes after changes
 
 ### 3) WooCommerce onboarding
@@ -166,17 +175,19 @@ Add terms (e.g., Color: Red/Blue/Black; Style: Casual/Sport).
 
 **CSV Import (recommended for demo)**
 
-1. Download [`public/products.zip`](https://github.com/zackha/nuxtcommerce/raw/refs/heads/master/public/products.zip) from the repo.
+1. Download [`public/products.zip`](https://github.com/zackha/nuxtcommerce/raw/refs/heads/master/public/products.zip)
+   from the repo.
 2. **Products → Import**, upload CSV(s), map columns:
 
-   * **variable** for parent products
-   * Attributes → `pa_color`, `pa_style`.
-   * Variations CSV must reference correct parent
+    * **variable** for parent products
+    * Attributes → `pa_color`, `pa_style`.
+    * Variations CSV must reference correct parent
 3. Ensure products are **Published**, **In Stock**, with prices.
 
 **Manual**
 
-* Variable product → add attributes (used for variations) → create variations from attributes → set price/stock → set images.
+* Variable product → add attributes (used for variations) → create variations from attributes → set price/stock → set
+  images.
 
 ### 6) Media sizes (thumbnails & large)
 
@@ -198,49 +209,6 @@ GQL_HOST=https://your-woocommerce-site.com/graphql
 
 This is read by `runtimeConfig.gqlHost` and used by the server utility that proxies & caches GraphQL calls.
 
-## Architecture Overview
-
-```
-/app
-  ├─ app.vue                      # Global head/meta + header/footer + Notivue
-  ├─ app.config.ts                # Site name/description, UI theme
-  ├─ pages/
-  │   ├─ index.vue                # Product grid, infinite scroll, filters
-  │   ├─ categories.vue           # Category grid
-  │   ├─ favorites.vue            # Wishlist page
-  │   └─ product/[id].vue         # Product detail, gallery, variations, schema.org
-  ├─ components/                  # UI building blocks (cards, carousels, cart, checkout...)
-  ├─ composables/                 # useCart, useCheckout, useWishlist, useComponents
-  └─ gql/                         # GraphQL queries & mutations
-
-/server
-  ├─ api/
-  │   ├─ products.get.ts          # GET products (cursor pagination) — cached (SWR)
-  │   ├─ product.get.ts           # GET product detail — cached (SWR)
-  │   ├─ search.get.ts            # GET search (top 6) — cached (SWR)
-  │   ├─ categories.get.ts        # GET categories — cached (SWR)
-  │   ├─ cart/add.post.ts         # POST add to cart (Woo session cookie handling)
-  │   ├─ cart/update.post.ts      # POST update quantities / remove
-  │   └─ checkout.post.ts         # POST checkout (COD demo)
-  ├─ routes/
-  │   ├─ sitemap.xml.ts           # Minimal sitemap
-  │   └─ robots.txt.ts            # Robots
-  └─ utils/wpgraphql.ts           # GraphQL client + error wrapper + Woo session cookie
-```
-
-**Flow:**
-Client (`$fetch` to `/api/*`) → Nitro server proxies to WPGraphQL → GET endpoints are cached (SWR); POST endpoints manage the WooCommerce session cookie.
-
-## API Endpoints (Server)
-
-* `GET /api/products?search=&category=&orderby=DESC|ASC&fieldby=DATE|PRICE&after=...`
-* `GET /api/product?slug=:slug&sku=:skuFragment`
-* `GET /api/search?search=:q` (first 6)
-* `GET /api/categories`
-* `POST /api/cart/add` `{ productId }`
-* `POST /api/cart/update` `{ items: [{ key, quantity }] }`
-* `POST /api/checkout` `{ billing: {...}, paymentMethod: 'cod' }`
-
 ## Internationalization (i18n)
 
 * Locales: **en-GB**, **nb-NO**, **nl-NL**, **de-DE**
@@ -257,7 +225,15 @@ Client (`$fetch` to `/api/*`) → Nitro server proxies to WPGraphQL → GET endp
 
 # 🙌 Contributors
 
-We sincerely thank everyone who has contributed to the original NuxtCommerce and this active fork.
+We sincerely thank everyone who has contributed to the original NuxtCommerce and this active fork. 🚀
+
+**Special thanks**
+
+|                                                 (Fork) Rik Peeters                                                 |                                               (Origin) Sefa Bulak                                               |
+|:------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------:|
+| [<img src="https://github.com/rikp777.png?size=115" width=115><br><sub>@rikp777</sub>](https://github.com/rikp777) | [<img src="https://github.com/zackha.png?size=115" width=115><br><sub>@zackha</sub>](https://github.com/zackha) |
+
+<sub>More contributors will be highlighted here as the project grows.</sub>
 
 ## Contact
 

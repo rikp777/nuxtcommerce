@@ -282,5 +282,61 @@
     "description": "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern und den Website-Verkehr zu analysieren.",
     "decline": "Ablehnen",
     "accept": "Akzeptieren"
+  },
+  "auth": {
+    "login": {
+      "title": "Anmelden",
+      "subtitle": "Geben Sie Ihre Daten ein, um fortzufahren.",
+      "side_title": "Willkommen zurück!",
+      "side_subtitle": "Melden Sie sich an, um Ihre Bestellungen einzusehen und Ihre Daten zu verwalten",
+      "form": {
+        "user": "Benutzername oder E-Mail",
+        "user_placeholder": "Ihr Benutzername oder Ihre E-Mail-Adresse",
+        "password": "Passwort",
+        "password_placeholder": "Ihr Passwort"
+      },
+      "forgot_password": "Passwort vergessen?",
+      "button": "Anmelden",
+      "register": "Noch kein Konto?",
+      "register_link": "Hier registrieren"
+    },
+    "register": {
+      "title": "Registrieren",
+      "subtitle": "Geben Sie Ihre Daten ein, um ein Konto zu erstellen.",
+      "side_title": "Konto erstellen!",
+      "side_subtitle": "Registrieren Sie sich, um mit dem Einkaufen zu beginnen",
+      "form": {
+        "first_name": "Vorname",
+        "first_name_placeholder": "Ihr Vorname",
+        "last_name": "Nachname",
+        "last_name_placeholder": "Ihr Nachname",
+        "email": "E-Mail",
+        "email_placeholder": "Ihre E-Mail-Adresse",
+        "password": "Passwort",
+        "password_placeholder": "Mindestens 8 Zeichen"
+      },
+      "button": "Registrieren",
+      "login": "Haben Sie bereits een Konto?",
+      "login_link": "Hier anmelden"
+    },
+    "forgot_password": {
+      "title": "Passwort vergessen?",
+      "subtitle": "Geben Sie Ihre E-Mail-Adresse ein, um einen Reset-Link zu erhalten.",
+      "side_title": "Keine Sorge.",
+      "side_subtitle": "Das passiert den Besten. Geben Sie Ihre E-Mail ein und wir senden Ihnen einen Link, um wieder Zugang zu erhalten.",
+      "form": {
+        "email": "E-Mail-Adresse",
+        "email_placeholder": "Ihre E-Mail-Adresse"
+      },
+      "button": "Reset-Link senden",
+      "footer_label": "Wieder eingefallen?",
+      "footer_link": "Anmelden",
+      "success": {
+        "title": "Posteingang prüfen!",
+        "description": "Wenn ein Konto für {email} existiert, haben wir einen Link zum Zurücksetzen Ihres Passworts gesendet.",
+        "button": "Zurück zum Login"
+      },
+      "error": "Etwas ist schiefgelaufen. Bitte überprüfen Sie Ihre E-Mail-Adresse."
+    }
   }
 }

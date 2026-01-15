@@ -282,5 +282,61 @@
     "description": "We use cookies to improve your experience and analyze site traffic.",
     "decline": "Decline",
     "accept": "Accept"
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "subtitle": "Enter your details to continue.",
+      "side_title": "Welcome back!",
+      "side_subtitle": "Log in to view your orders and manage your account",
+      "form": {
+        "user": "Username or Email",
+        "user_placeholder": "Your username or email address",
+        "password": "Password",
+        "password_placeholder": "Your password"
+      },
+      "forgot_password": "Forgot password?",
+      "button": "Login",
+      "register": "No account yet?",
+      "register_link": "Register here"
+    },
+    "register": {
+      "title": "Register",
+      "subtitle": "Enter your details to create an account.",
+      "side_title": "Create an account!",
+      "side_subtitle": "Register to start shopping",
+      "form": {
+        "first_name": "First Name",
+        "first_name_placeholder": "Your first name",
+        "last_name": "Last Name",
+        "last_name_placeholder": "Your last name",
+        "email": "Email",
+        "email_placeholder": "Your email address",
+        "password": "Password",
+        "password_placeholder": ""
+      },
+      "button": "Register",
+      "login": "Already have an account?",
+      "login_link": "Login here"
+    },
+    "forgot_password": {
+      "title": "Forgot password?",
+      "subtitle": "Enter your email address to receive a reset link.",
+      "side_title": "Don't worry.",
+      "side_subtitle": "It happens to the best of us. Enter your email and we'll send you a link to get back in.",
+      "form": {
+        "email": "Email Address",
+        "email_placeholder": "your email address"
+      },
+      "button": "Send reset link",
+      "footer_label": "Remembered it?",
+      "footer_link": "Login",
+      "success": {
+        "title": "Check your inbox!",
+        "description": "If an account exists for {email}, we have sent a link to reset your password.",
+        "button": "Back to login"
+      },
+      "error": "Something went wrong. Please check your email address."
+    }
   }
 }

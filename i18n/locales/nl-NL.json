@@ -282,5 +282,61 @@
     "description": "We gebruiken cookies om jouw ervaring te verbeteren en bezoekersverkeer te meten.",
     "decline": "Niet nu",
     "accept": "Prima"
+  },
+  "auth": {
+    "login": {
+      "title": "Inloggen",
+      "subtitle": "Vul je gegevens in om verder te gaan.",
+      "side_title": "Welkom terug!",
+      "side_subtitle": "Log in om je bestellingen te bekijken en je gegevens te beheren",
+      "form": {
+        "user": "Gebruikersnaam of E-mail",
+        "user_placeholder": "Je gebruikersnaam of e-mailadres",
+        "password": "Wachtwoord",
+        "password_placeholder": "Je wachtwoord"
+      },
+      "forgot_password": "Wachtwoord vergeten?",
+      "button": "Inloggen",
+      "register": "Nog geen account?",
+      "register_link": "Registreer hier"
+    },
+    "register": {
+      "title": "Registreren",
+      "subtitle": "Vul je gegevens in om een account aan te maken.",
+      "side_title": "Account aanmaken!",
+      "side_subtitle": "Registreer je om te beginnen met winkelen",
+      "form": {
+        "first_name": "Voornaam",
+        "first_name_placeholder": "Je voornaam",
+        "last_name": "Achternaam",
+        "last_name_placeholder": "Je achternaam",
+        "email": "E-mailadres",
+        "email_placeholder": "Je e-mailadres",
+        "password": "Wachtwoord",
+        "password_placeholder": "Minimaal 8 tekens"
+      },
+      "button": "Registreren",
+      "login": "Heb je al een account?",
+      "login_link": "Hier inloggen"
+    },
+    "forgot_password": {
+      "title": "Wachtwoord vergeten?",
+      "subtitle": "Vul je e-mailadres in om een reset-link te ontvangen.",
+      "side_title": "Geen zorgen.",
+      "side_subtitle": "Het gebeurt de besten. Vul je e-mailadres in en we sturen je een link om weer toegang te krijgen.",
+      "form": {
+        "email": "E-mailadres",
+        "email_placeholder": "je e-mailadres"
+      },
+      "button": "Stuur reset link",
+      "footer_label": "Toch weer herinnerd?",
+      "footer_link": "Log in",
+      "success": {
+        "title": "Check je mail!",
+        "description": "Als er een account bestaat voor {email}, hebben we een link gestuurd om je wachtwoord te herstellen.",
+        "button": "Terug naar inloggen"
+      },
+      "error": "Er ging iets mis. Controleer je e-mailadres."
+    }
   }
 }

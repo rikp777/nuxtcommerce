@@ -39,3 +39,34 @@ export async function requestMutation<T = unknown>(event: H3Event, query: Reques
 
   return handleError(client.request<T>(query, variables, { ['woocommerce-session']: session }), 'GraphQL mutation failed');
 }
+
+export async function requestAuthorizedQuery<T = unknown>(event: H3Event, query: RequestDocument, variables?: Variables): Promise<T> {
+  const token = getCookie(event, 'auth-token');
+  const client = getClient();
+
+  if (!token) {
+    throw createError({ statusCode: 401, statusMessage: 'Unauthorized' });
+  }
+
+  client.setHeader('Authorization', `Bearer ${token}`);
+
+  return handleError(client.request<T>(query, variables), 'Authorized GraphQL query failed');
+}
+
+export async function requestAuthorizedMutation<T = unknown>(event: H3Event, query: RequestDocument, variables?: Variables): Promise<T> {
+  const token = getCookie(event, 'auth-token');
+  const session = getCookie(event, 'woocommerce-session');
+  const client = getClient();
+
+  if (!token) {
+    throw createError({ statusCode: 401, statusMessage: 'Unauthorized' });
+  }
+
+  client.setHeader('Authorization', `Bearer ${token}`);
+
+  if (session) {
+    client.setHeader('woocommerce-session', session);
+  }
+
+  return handleError(client.request<T>(query, variables), 'Authorized GraphQL mutation failed');
+}
